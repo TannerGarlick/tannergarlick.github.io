@@ -9,11 +9,12 @@ main,
 footer {
   margin: 1.25rem auto;
   max-width: 760px;
+  font-family: "Mukta", times, serif;
 }
 
 header,
 footer {
-  background-color:#62b4cf;
+  background-color:#006AE9;
   color: white;
   text-align: center;
 }

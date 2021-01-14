@@ -23,8 +23,7 @@ header {
   padding: 1.5rem;
 }
 
-nav img {
+header img {
   float: right;
   margin: 10px;
-  border: 1px solid black;
 }

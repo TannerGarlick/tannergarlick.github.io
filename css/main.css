@@ -1,0 +1,29 @@
+body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+header,
+nav,
+main,
+footer {
+  margin: 1.25rem auto;
+  max-width: 760px;
+}
+
+header,
+footer {
+  background-color:#62b4cf;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 1.5rem;
+}
+
+nav img {
+  float: right;
+  margin: 10px;
+  border: 1px solid black;
+}

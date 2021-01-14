@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/medium.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
-    <title>Home Page</title>
-    <meta name="description" content=" ">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <title>WDD 230 Tanner Garlick</title>
+    <meta name="description" content="Assignment portal for Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho" />
+  </head>
+  <body>
     <header>
-        <h2>CIT 230: Assignment Portal</h2>
-        <img src="images/profilephoto.jpg" alt="My Profile Photo">
-        <h1>Tanner Garlick</h1>
+      <h1>Tanner Garlick</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#">Lesson 02: Assignment Link</a></li>
-            <li><a href="#">Lesson 03: Assignment Link</a></li>
-            <li><a href="#">Lesson 04: Link | Link</a></li>
-        </ul>
+      <img src="images/profilephoto.jpg" alt="My Profile Photo" />
+      <h2>CIT 230: Assignment Portal</h2>
+      <ul>
+        <li><a href="#">Lesson 02: Assignment Link</a></li>
+        <li><a href="#">Lesson 03: Assignment Link</a></li>
+        <li><a href="#">Lesson 04: Link | Link</a></li>
+      </ul>
     </nav>
-    <main>
-
-    </main>
+    <main></main>
     <footer>
-        &copy; 2021 | Tanner Garlick | Nevada | BYUI Online Learning <br>
-        Last Updated: 1/14/2021
+      &copy; 2021 | Tanner Garlick | Nevada | <a href = "https://www.byui.edu/online">BYUI Online Learning </a> <br />
+      Last Updated: <span id="lastmodified"></span>
     </footer>
-</body>
+      <script>  var x = document.lastModified;
+        document.getElementById("lastmodified").innerHTML = x; </script>
+  </body>
 </html>

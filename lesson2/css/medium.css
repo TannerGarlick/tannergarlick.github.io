@@ -1,18 +1,22 @@
 @media only screen and (min-width: 37.5em) {
-	div.column{
-		grid-template-columns: 1fr 1fr;
-	  }
-	  
-	section.contrast {
-		grid-column: span 2;
-	}
+  div.column {
+    grid-template-columns: 1fr 1fr;
+  }
 
-	section picture {
-		display: block;
-	}
-	section picture img {
-		width: 100%;
-		height: auto;
-		border: 1px solid #bbb;
-	}
+  .colimage {
+    max-width: 360px;
+  }
+
+  section.contrast {
+    grid-column: span 2;
+  }
+
+  section picture {
+    display: block;
+  }
+  section picture img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #bbb;
+  }
 }

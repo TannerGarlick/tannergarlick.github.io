@@ -28,7 +28,9 @@
         <div id="ruleofthirds">
           <h3>Rule of Thirds</h3>
           <p>IGN</p>
-          <a href="https://www.ign.com/">ign.com</a>
+          <div id="website">
+            <a href="https://www.ign.com/">ign.com</a>
+          </div>
           <picture>
             <img
               class="colimage"
@@ -45,7 +47,9 @@
         <div id="contrast">
           <h3>Contrast</h3>
           <p>The Guardian</p>
-          <a href="https://www.theguardian.com/us">theguardian.com</a>
+          <div id="website">
+            <a href="https://www.theguardian.com/us">theguardian.com</a>
+          </div>
           <picture>
             <img
               class="colimage"
@@ -62,7 +66,9 @@
         <div id="repetition">
           <h3>Repetition</h3>
           <p>Ted</p>
-          <a href="https://www.ted.com/">ted.com</a>
+          <div id="website">
+            <a href="https://www.ted.com/">ted.com</a>
+          </div>
           <picture>
             <img
               class="colimage"
@@ -79,13 +85,11 @@
       </div>
     </main>
     <footer>
-      &copy; 2021 | Tanner Garlick | Nevada |
+      &copy; <span id="currentyear"></span> | Tanner Garlick | Nevada |
       <a href="https://www.byui.edu/online">BYUI Online Learning </a> <br />
       Last Updated: <span id="lastmodified"></span>
     </footer>
-    <script>
-      var x = document.lastModified;
-      document.getElementById("lastmodified").innerHTML = x;
-    </script>
+    <script src="../js/time.js"></script>
+    <script src="../js/date.js"></script>
   </body>
 </html>

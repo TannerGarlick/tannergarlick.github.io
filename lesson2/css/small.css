@@ -1,11 +1,11 @@
 main {
-	max-width: 767px;
-	margin: 0 auto;
-	font-size: 0.8rem;
+  max-width: 767px;
+  margin: 0 auto;
+  font-size: 0.8rem;
 }
 
-div.column{
-  display:grid;
+div.column {
+  display: grid;
 }
 
 header,
@@ -17,11 +17,15 @@ footer {
 
 h3 {
   color: rgb(255, 255, 255);
-  background-color:rgb(53, 53, 53);
+  background-color: rgb(53, 53, 53);
   padding-left: 5px;
   padding-block: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+div.website {
+  position: fixed;
 }
 
 body header h2 {
@@ -29,15 +33,17 @@ body header h2 {
 }
 
 .colimage {
-  width: 250px;
+  width: 97%;
 }
 
 .column {
-	border: 1px solid #bbb;
+  column-gap: 20px;
+  border: 1px solid #bbb;
   padding-left: 5px;
   padding-right: 5px;
   background-color: rgb(214, 214, 214);
   border-radius: 10px;
+  margin-bottom: 120px;
 }
 
 header,
@@ -50,8 +56,8 @@ footer {
 
 footer {
   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   padding-block: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-block: 10px;
 }

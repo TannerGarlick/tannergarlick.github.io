@@ -1,9 +1,11 @@
 main {
 	max-width: 767px;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr;
 	font-size: 0.8rem;
+}
+
+div.column{
+  display:grid;
 }
 
 header,
@@ -13,7 +15,7 @@ footer {
   font-family: "Mukta", times, serif;
 }
 
-h2 {
+h3 {
   color: rgb(255, 255, 255);
   background-color:rgb(53, 53, 53);
   padding-left: 5px;
@@ -22,7 +24,7 @@ h2 {
   border-top-right-radius: 10px;
 }
 
-h3 {
+body header h2 {
   font-size: 7mm;
 }
 

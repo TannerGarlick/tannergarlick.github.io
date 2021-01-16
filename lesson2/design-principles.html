@@ -1,10 +1,91 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <title>Design Principles Document Tanner Garlick</title>
+    <meta
+      name="description"
+      content="Design Principles Document Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Design Principles Document</h1>
+      <h3>Tanner Garlick</h3>
+    </header>
+    <main>
+      <selection class="column">
+        <h2>Rule of Thirds</h2>
+        <div id="ruleofthirds">
+          <p>IGN</p>
+          <a href="https://www.ign.com/">ign.com</a>
+          <picture>
+            <img
+              class="colimage"
+              src="../lesson2/images/www.ign.com.png"
+              alt="IGN website image"
+            />
+          </picture>
+          <p>
+            IGN uses rule of thirds in the image for WandaVision season
+            premiere. You can see the black and white on 2/3 on the right side
+            of the image and the left side has 1/3 in color.
+          </p>
+        </div>
+        <div id="contrast">
+          <h2>Contrast</h2>
+          <p>The Guardian</p>
+          <a href="https://www.theguardian.com/us">theguardian.com</a>
+          <picture>
+            <img
+              class="colimage"
+              src="../lesson2/images/www.theguardian.com.png"
+              alt="Guardian website image"
+            />
+          </picture>
+          <p>
+            The Guardian shows the use of contrast on their website by using
+            bold red text at the begining of all their articles to attract the
+            viewer's attention to the main point of each article.
+          </p>
+        </div>
+        <div id="repetition">
+          <h2>Repetition</h2>
+          <p>Ted</p>
+          <a href="https://www.ted.com/">ted.com</a>
+          <picture>
+            <img
+              class="colimage"
+              src="../lesson2/images/www.ted.com.png"
+              alt="ted.com website image"
+            />
+          </picture>
+          <p>
+            Ted.com shows repetition by using the same red boxes and white text
+            for the section topics. They also use the same fonts and font sizes
+            for the titles of their videos.
+          </p>
+        </div>
+      </selection>
+    </main>
+    <footer>
+      &copy; 2021 | Tanner Garlick | Nevada |
+      <a href="https://www.byui.edu/online">BYUI Online Learning </a> <br />
+      Last Updated: <span id="lastmodified"></span>
+    </footer>
+    <script>
+      var x = document.lastModified;
+      document.getElementById("lastmodified").innerHTML = x;
+    </script>
+  </body>
 </html>

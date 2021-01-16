@@ -1,0 +1,55 @@
+main {
+	max-width: 767px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	font-size: 0.8rem;
+}
+
+header,
+main,
+footer {
+  margin: 1.25rem auto;
+  font-family: "Mukta", times, serif;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  background-color:rgb(53, 53, 53);
+  padding-left: 5px;
+  padding-block: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+h3 {
+  font-size: 7mm;
+}
+
+.colimage {
+  width: 250px;
+}
+
+.column {
+	border: 1px solid #bbb;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+}
+
+header,
+footer {
+  background-color: #006ae9;
+  color: white;
+  text-align: center;
+  padding-block: 5px;
+}
+
+footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding-block: 10px;
+}

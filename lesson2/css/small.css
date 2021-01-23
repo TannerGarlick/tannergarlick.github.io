@@ -55,7 +55,9 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
+footer a {
+  color:white;
+}
 footer {
   position: fixed;
   left: 0;

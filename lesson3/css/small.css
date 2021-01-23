@@ -1,6 +1,6 @@
 header,
 footer {
-  background-color: #0077B6;
+  background-color: #0077b6;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -15,68 +15,67 @@ main {
   margin: 0 auto;
   text-align: center;
 }
-h1, h2, h3 {
-	font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
-	font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
 }
 
 main {
-	font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 h1 {
-	color: white;
+  color: white;
   font-size: 2.7rem;
-  
 }
 h2 {
   color: white;
   font-size: 1.3rem;
-  
 }
 h3 {
-	color: #023E8A;
-	font-size: 1.5rem;
-	
+  color: #023e8a;
+  font-size: 1.5rem;
 }
 
 .starcommandblue {
-	background-color: #0077B6;
-	color: white;
+  background-color: #0077b6;
+  color: white;
 }
-.largefont{
-	background-color: white;
+.largefont {
+  background-color: white;
 }
 .navmenu {
-	background-color: #002363;
-	color: white;
+  background-color: #002363;
+  color: white;
 }
 
 .ptext {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
 .darkcornflowerblue {
-	background-color: #023E8A;
-	color: white;
+  background-color: #023e8a;
+  color: white;
 }
 .navhover {
-	background-color: #EDFAFD;
+  background-color: #edfafd;
 }
 .montserrat {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .quattorcento {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
 }
 .merriweather {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 .roboto {
-  font-family: 'Roboto', times, serif
+  font-family: "Roboto", times, serif;
 }
 nav {
   background-color: #002363;
@@ -98,7 +97,7 @@ nav ul li a {
   font-size: 0.95rem;
 }
 nav a:hover {
-  background-color: #EDFAFD;
+  background-color: #edfafd;
   color: #36454f;
 }
 
@@ -121,7 +120,7 @@ main article {
   border-radius: 10px;
 }
 footer a {
-  color:white;
+  color: white;
 }
 footer {
   margin: 0 auto;
@@ -131,5 +130,5 @@ footer {
   color: white;
   text-align: center;
   margin: 1.25rem auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }

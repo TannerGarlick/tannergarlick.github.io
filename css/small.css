@@ -42,4 +42,6 @@ h2 {
   border-bottom: 1px solid #999;
   margin-bottom:0.5rem;
 }
-
+footer a {
+  color:white;
+}

@@ -119,7 +119,9 @@ main article {
   background-color: #eee;
   border-radius: 10px;
 }
-
+footer a {
+  color:white;
+}
 footer {
   flex: 0 1 100%;
   height: 2rem;

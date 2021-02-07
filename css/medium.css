@@ -15,4 +15,8 @@
         margin: 10px;
         border-radius: 0 10px 0 0;
       }
+      article {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
 }

@@ -8,5 +8,5 @@ function announcement() {
     } else {
         answer.style.display = "none";
     }
-document.getElementById("pancakes").innerHTML = answer;
+document.getElementById("pancakes").innerHTML = number;
 }

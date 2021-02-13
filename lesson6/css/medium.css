@@ -1,4 +1,8 @@
 @media only screen and (min-width: 35em) {
+  nav {
+  text-align: center;
+  justify-content: center;
+  }
   .herodiv {
     margin: 10px auto;
     position: relative;

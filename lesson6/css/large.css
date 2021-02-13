@@ -1,8 +1,6 @@
 @media only screen and (min-width: 64rem) {
   nav {
   display: flex;
-  text-align: center;
-  justify-content: center;
   }
   nav button {
     display: none;

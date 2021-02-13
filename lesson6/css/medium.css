@@ -1,6 +1,5 @@
 @media only screen and (min-width: 35em) {
   nav {
-  text-align: center;
   justify-content: center;
   }
   .herodiv {
@@ -30,10 +29,6 @@
 
   .contactbox img {
     max-width: 50%;
-    height: auto;
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
   }
   .textandsocial {
     display: inline-block;

@@ -53,6 +53,10 @@ nav ul.hide {
   display: none;
 }
 
+nav {
+  font-family: "Quattrocento Sans", sans-serif;
+}
+
 aside {
   background-color: #002363;
   padding: 0.5rem;
@@ -99,17 +103,6 @@ header img {
   padding: 20px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Montserrat", sans-serif;
-}
-
-nav {
-  font-family: "Quattrocento Sans", sans-serif;
-}
-
 main figure.herophoto img {
   display: block;
   width: 100%;
@@ -122,20 +115,24 @@ main {
 h1 {
   color: white;
   font-size: 2.7rem;
+  font-family: "Montserrat", sans-serif;
 }
 h2 {
   color: #023e8a;
   font-size: 2rem;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 h3 {
   color: #023e8a;
   font-size: 1.5rem;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 h4 {
   color: #023e8a;
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 aside h2 {
   color: white;

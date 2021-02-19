@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../lesson5/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Gallery</title>
+    <meta
+      name="The Oncoming Storm of Idaho-Gallery Page"
+      content="Gallery page Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
+    />
+  </head>
+  <body>
+    <!-- HEADER HERE -->
+    <header>
+      <img
+        class="colimage"
+        src="../lesson3/images/WeatherLogo.png"
+        alt="The OCS of Idaho Logo"
+      />
+      <section class="headings">
+        <h1>The Oncoming Storm of Idaho</h1>
+        <div class="m">We want you to be prepared!</div>
+      </section>
+    </header>
+
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button onclick="toggleMenu()">&#9776; Menu</button>
+      <ul id="primaryNav" class="hide">
+        <li><a href="#">Home</a></li>
+        <li><a href="../lesson6/preston-6.html">Preston</a></li>
+        <li><a href="#">Soda Springs</a></li>
+        <li><a href="#">Fish Haven</a></li>
+        <li><a href="#">Storm Center</a></li>
+        <li class="active"><a href="../lesson7/preston-7.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT HERE -->
+    <main>
+      <h2>Gallery</h2>
+      <div class=container>
+      <figure>
+        <img class="norm" data-src="images/preston_in_the_spring.jpg" alt="Preston image" />
+        <figcaption><i>Preston in the Spring</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/preston_in_the_summer.jpg" alt="Preston image" />
+        <figcaption><i>Preston in the Summer</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/preston_in_the_winter.jpg" alt="Preston image" />
+        <figcaption><i>Preston in the Winter</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/preston_sunset.jpg" alt="Preston image" />
+        <figcaption><i>Preston Sunset</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/soda_springs_in_the_spring.jpg" alt="Soda Springs image" />
+        <figcaption><i>Soda Springs in the Spring</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/soda_springs_in_the_winter.jpg" alt="Soda Springs image" />
+        <figcaption><i>Soda Springs in the Winter</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/storm_center_in_the_winter.jpg" alt="Storm Center image" />
+        <figcaption><i>Storm Center in the Winter</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/raining_in_fishhaven.jpg" alt="Fish Haven image" />
+        <figcaption><i>Raining in Fish Haven</i></figcaption>
+      </figure>
+      <figure>
+        <img class="norm" data-src="images/fishhaven_in_the_winter.jpg" alt="Fish Haven image" />
+        <figcaption><i>Fish Haven in the Winter</i></figcaption>
+      </figure>
+    </div>
+
+    <h3>Contact Information</h3>
+    <div class="contactbox">
+      <br />
+      <div class="textandsocial">
+        <div class="info">
+          <h4>Preston Town</h4>
+          <p>2 N State St</p>
+          <p>Preston, ID 83263</p>
+          <p>111-111-1111</p>
+          <p>prestontown@gmail.com</p>
+        </div>
+
+        <div class="social-links">
+          <p>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="../lesson5/images/youtube.png" alt="YouTube icon"
+            /></a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../lesson5/images/twitter.png" alt="Twitter icon"
+            /></a>
+            <a href="https://www.google.com" target="_blank">
+              <img src="../lesson5/images/google.png" alt="Google icon"
+            /></a>
+          </p>
+        </div>
+      </div>
+      <img src="../lesson5/images/preston-map.PNG" alt="preston map image" />
+    </div>
+
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>
+      <span
+        >&copy; <span id="currentyear"> | Tanner Garlick </span>
+        <span
+          ><a href="https://www.byui.edu/online"> BYUI Online Learning </a>
+        </span>
+        Today's Date: <span id="currentdate"></span
+      ></span>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/imagehandling.js"></script>
+    <script src="js/webfontload.js"></script>
+    <script src="../lesson6/js/windchill.js"></script>
+    <script src="../lesson5/js/day.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="../js/currentdate.js"></script>
+    <script src="../js/date.js"></script>
+  </body>
+</html>

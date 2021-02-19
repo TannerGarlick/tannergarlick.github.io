@@ -1,0 +1,55 @@
+@media only screen and (min-width: 50em) {
+  nav {
+  justify-content: center;
+  }
+  .herodiv {
+    margin: 10px auto;
+    position: relative;
+  }
+  h4,
+  p {
+    margin: 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  figure img {
+    margin-right: .5rem;
+  }
+
+  .weathersumary {
+    position: absolute;
+    top: 25px;
+    left: 53px;
+    background: linear-gradient(#eee, #0077b6);
+    border: 1px solid #000;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.8;
+  }
+
+  .articlebox img {
+    max-width: 30%;
+    float: right;
+  }
+
+  .contactbox img {
+    max-width: 50%;
+  }
+  .textandsocial {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    padding: 5rem;
+  }
+  .contactbox {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+  .social-links img {
+    max-width: 40px;
+  }
+}

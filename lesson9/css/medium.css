@@ -1,4 +1,4 @@
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 850px) {
     nav {
     justify-content: center;
     }
@@ -25,6 +25,44 @@
     .articlebox img {
       max-width: 30%;
       float: right;
+    }
+
+    .preston, .fishhaven, .sodasprings {
+      max-width: 900px;
+    }
+
+    .preston img {
+      float: left;
+    }
+    .preston h2, .preston h3, .preston p {
+      float: right;
+      margin: 0;
+    }
+
+    .fishhaven img {
+      float: right;
+    }
+
+    .fishhaven h2, .fishhaven h3, .fishhaven p {
+      float: left;
+    }
+    .sodasprings img {
+      float: left;
+    }
+    .sodasprings h2, .sodasprings h3, .sodasprings p {
+      float: right;
+    }
+
+    #towns {
+	    flex-wrap: wrap;
+    }
+  
+    section p {
+      display: block;
+    }
+  
+    section img {
+      display: block;
     }
   
     .contactbox img {

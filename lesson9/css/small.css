@@ -94,7 +94,34 @@ nav {
     filter: blur(0em);
     transition: filter 0.5s;
   }
-  
+
+  .preston, .fishhaven, .sodasprings {
+    display: flex;
+    background-color: #ddf3ff;
+    padding: 10px;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+   section h3 {
+    font-size: 1.2rem;
+  }
+
+  section p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+  }
+
   figure figcaption {
     text-align: center;
     font-family: Roboto;

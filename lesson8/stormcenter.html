@@ -21,10 +21,10 @@
       href="../lesson5/images/favicon.ico"
       type="image/x-icon"
     />
-    <title>Gallery</title>
+    <title>Storm Center</title>
     <meta
-      name="The Oncoming Storm of Idaho-Gallery Page"
-      content="Gallery page Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
+      name="The Oncoming Storm of Idaho-Storm Center Page"
+      content="Storm Center page Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
     />
   </head>
   <body>
@@ -60,7 +60,7 @@
         <form method="get" action="thanks.html">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label class="top">Full Name* <input type="text" name="fname" required></label>
+                <label class="top">Full Name* <input type="text" name="fname" pattern="[A-Za-z]{5,}" required></label>
                 <label class="top">Email <input type="email" name="email" placeholder="someone@gmail.com"></label>
                 <label class="top">Phone Number* <input type="tel" name="phone" placeholder="1234441234" required></label>
                 <label class="top">Zip Code* <input type="number" name="zip" required></label>
@@ -97,7 +97,7 @@
                     <option value="10">
                 </datalist>
                 <label class="top">Storm Region<select>
-                    <option value="">Select Region</option>
+                    <option value="" style="display:none">Select Region</option>
                     <option value="Preston">Preston</option>
                     <option value="Soda Springs">Soda Springs</option>
                     <option value="Fish Haven">Fish Haven</option>

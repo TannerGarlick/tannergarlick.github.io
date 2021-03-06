@@ -37,6 +37,10 @@
       max-width: 28%;
     }
 
+    #towns section div {
+      background-color:wheat;
+    }
+
     #towns {
       max-width: 900px;
     }

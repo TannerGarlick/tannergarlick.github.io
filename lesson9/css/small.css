@@ -103,12 +103,10 @@ nav {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    flex-direction: row;
   }
 
   #towns section {
     align-items: center;
-    justify-content: flex-start;
     border: 10px;
     border-color: white;
   }

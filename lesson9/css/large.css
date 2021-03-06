@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75rem) {
     nav {
         display: flex;
         }
@@ -31,34 +31,14 @@
       font-size: 3rem;
     }
 
-    .preston, .fishhaven, .sodasprings {
-      align-items: unset;
-      max-width: 310px;
-    }
-  
-    section img {
-      max-width: 100px;
-    }
-
-    .preston h2, .preston h3, .preston p {
-      float: none;
-    }
-
-    .fishhaven h2, .fishhaven h3, .fishhaven p {
-      float: none;
-    }
-    .sodasprings h2, .sodasprings h3, .sodasprings p {
-      float: none;
+    #towns section {
+      display: flex;
+      flex-direction: row;
+      max-width: 28%;
     }
 
     #towns {
-	    display: flex;
-      justify-content: space-evenly;
-      flex-wrap:initial;
-    }
-  
-    section p {
-      display: flex;
+      max-width: 900px;
     }
 
     .m {

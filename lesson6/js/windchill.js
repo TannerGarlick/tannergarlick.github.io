@@ -1,5 +1,5 @@
-const t = parseFloat(document.querySelector("#temp").textContent);
-const s = parseFloat(document.querySelector("#wind").textContent);
+const t = parseFloat(document.querySelector("#temperature").textContent);
+const s = parseFloat(document.querySelector("#windspeed").textContent);
 var f;
 
 if (t <= 50 && s >= 3) {

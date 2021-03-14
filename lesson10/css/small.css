@@ -107,6 +107,10 @@ html {
     display: block;
     width: 100%;
   }
+
+  .column-col {
+    padding: 20px;
+  }
   
   main {
     font-family: "Merriweather", serif;

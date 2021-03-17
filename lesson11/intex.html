@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="../lesson9/css/small.css" rel="stylesheet" />
+    <link href="../lesson9/css/medium.css" rel="stylesheet" />
+    <link href="../lesson9/css/large.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="../lesson5/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Home Page</title>
+    <meta
+      name="The Oncoming Storm of Idaho-Home Page"
+      content="Home Page Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
+    />
+  </head>
+  <body>
+    <!-- HEADER HERE -->
+    <header>
+      <img
+        class="colimage"
+        src="../lesson3/images/WeatherLogo.png"
+        alt="The OCS of Idaho Logo"
+      />
+      <section class="headings">
+        <h1>The Oncoming Storm of Idaho</h1>
+        <div class="m">We want you to be prepared!</div>
+      </section>
+    </header>
+
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button onclick="toggleMenu()">&#9776; Menu</button>
+      <ul id="primaryNav" class="hide">
+        <li class ="active"><a href="../lesson11/intex.html">Home</a></li>
+        <li class ="#"><a href="../lesson11/preston.html">Preston</a></li>
+        <li class ="#"><a href="../lesson11/sodasprings.html">Soda Springs</a></li>
+        <li class ="#"><a href="../lesson11/fishhaven.html">Fish Haven</a></li>
+        <li class="#"><a href="../lesson11/stormcenter.html">Storm Center</a></li>
+        <li class="#"><a href="../lesson11/gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT HERE -->
+    <main>
+      <h2>Home</h2>
+      <div class="herodiv">
+        <img
+          src="../lesson5/images/town-image-compress.jpg"
+          alt="preston town hero image"
+        />
+        </div>
+        <section id="towns">
+      <div class="cards"></div>
+        </section>
+
+      <div class="articlebox">
+        <h3>Article Title</h3>
+        <p>By Tanner Garlick</p>
+        <br />
+        <img
+          id="articleimg"
+          src="../lesson9/images/article-image.jpg"
+          alt="article image"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+          repudiandae iusto commodi repellendus numquam fuga facere doloremque
+          sit vel aliquid porro, laudantium nostrum blanditiis odit in accusamus
+          maiores? Maxime veritatis pariatur, sapiente atque quia hic modi
+          maiores fugiat quam totam ratione at excepturi blanditiis nam dolorem
+          culpa magni voluptates reiciendis nesciunt impedit! Temporibus ipsum
+          sit omnis cupiditate atque qui impedit esse, magnam laborum facilis
+          nisi fugit corporis sed sapiente perferendis eveniet. Officiis quasi
+          aliquam quo, excepturi dicta illo aliquid exercitationem facere quos,
+          magnam quibusdam? Odio quaerat maiores error assumenda nihil
+          aspernatur quo nisi vitae non harum voluptatum quis consectetur,
+          possimus magnam id nulla aperiam modi doloribus, hic reiciendis
+          temporibus, est unde dolorum voluptas. Vero delectus nisi, neque quis
+          libero dolorum hic voluptate voluptas. Voluptatem maxime provident
+          temporibus commodi, neque sit architecto omnis ex beatae aspernatur
+          voluptatibus ratione quibusdam esse possimus cum nihil debitis rerum
+          quo corporis! Illum culpa nulla et iusto rerum sunt exercitationem quo
+          aliquid error est, laboriosam perspiciatis asperiores accusamus, at
+          eveniet dicta quam consequuntur illo. Expedita provident nam sed?
+          Enim, officiis mollitia, eveniet expedita veniam quidem sint omnis
+          suscipit odio tempora consequatur autem, facilis vitae molestias ipsum
+          vel reprehenderit velit ex nam itaque voluptates a quam labore!
+        </p>
+        <br />
+      </div>
+    <h3>Contact Information</h3>
+    <div class="contactbox">
+      <br />
+      <div class="textandsocial">
+        <div class="info">
+          <h4>Preston Town</h4>
+          <p>2 N State St</p>
+          <p>Preston, ID 83263</p>
+          <p>111-111-1111</p>
+          <p>prestontown@gmail.com</p>
+        </div>
+
+        <div class="social-links">
+          <p>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="../lesson5/images/youtube.png" alt="YouTube icon"
+            /></a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../lesson5/images/twitter.png" alt="Twitter icon"
+            /></a>
+            <a href="https://www.google.com" target="_blank">
+              <img src="../lesson5/images/google.png" alt="Google icon"
+            /></a>
+          </p>
+        </div>
+      </div>
+      <img src="../lesson5/images/preston-map.PNG" alt="preston map image" />
+    </div>
+
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>
+      <span
+        >&copy; <span id="currentyear"> | Tanner Garlick </span>
+        <span
+          ><a href="https://www.byui.edu/online"> BYUI Online Learning </a>
+        </span>
+        Today's Date: <span id="currentdate"></span
+      ></span>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="../lesson9/js/homepage.js"></script>
+    <script src="../lesson7/js/imagehandling.js"></script>
+    <script src="../js/webfontload.js"></script>
+    <script src="../lesson5/js/day.js"></script>
+    <script src="../lesson7/js/scripts.js"></script>
+    <script src="../js/currentdate.js"></script>
+    <script src="../js/date.js"></script>
+  </body>
+</html>

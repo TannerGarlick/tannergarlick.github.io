@@ -53,11 +53,18 @@
     <main>
       <h2>Home</h2>
       <div class="herodiv">
-        <img
-          src="../lesson11/images/town-image-compress.jpg"
-          alt="preston town hero image"
-        />
-        </div>
+        <picture class="herophoto">
+          <source media="(max-width: 640px)" srcset="../lesson11/images/homehero3.png" />
+          <source
+            media="(max-width: 1024px)"
+            srcset="../lesson11/images/homehero2.png"
+          />
+          <source
+            media="(max-width: 1280px)"
+            srcset="../lesson11/images/homehero1.png"
+          />
+          <img src="../lesson11/images/homehero1.png" alt="hero image of somewhere in Idaho" />
+        </picture>
         <section id="towns">
         </section>
 

@@ -34,7 +34,7 @@
     #towns section {
       display: flex;
       flex-direction: row;
-      max-width: 28%;
+      max-width: 245px;
     }
 
     #towns section div {
@@ -43,6 +43,12 @@
 
     #towns {
       max-width: 900px;
+    }
+    
+    #towns div {
+      max-width: auto;
+      max-height: auto;
+      padding: 27px;
     }
     /* Gallery */
     .container {

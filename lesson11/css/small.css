@@ -296,6 +296,8 @@ figure img[data-src]{
   }
   body p {
     font-family: "Merriweather", serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
   
   .forcastbox h3 {
@@ -330,10 +332,6 @@ figure img[data-src]{
     height: auto;
     width: auto;
     padding-left: 5px;
-  }
-  .articlebox p {
-    font-size: 1.1rem;
-    line-height: 1.8;
   }
   .contactbox img {
     max-width: 90%;
@@ -370,4 +368,3 @@ figure img[data-src]{
     display: table;
     clear: both;
   }
-  

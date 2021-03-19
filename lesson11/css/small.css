@@ -77,7 +77,157 @@ html {
     margin-left: 20px;
     font-size: 1rem;
   }
+  /*  home  */
+  figure {
+    background-color: #ddf3ff;
+    padding-bottom: 1em;
+  }
+  .container {
+    display: grid;
+    justify-content:center;
+    text-align:center;
+  }
   
+  figure img {
+    width: 300px;
+    height: auto;
+    margin: .5rem;
+    filter: blur(0em);
+    transition: filter 0.5s;
+  }
+
+  #towns {
+    overflow: hidden;
+    background-color: #ddf3ff;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #towns section {
+    align-items: center;
+    border: 10px;
+    border-color: white;
+    width: auto;
+    height: auto;
+  }
+
+  section p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #towns img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  figure figcaption {
+    text-align: center;
+    font-family: Roboto;
+  }
+  
+  figure img[data-src]{
+    filter: blur(0.2em);
+  }
+
+  /* -------------- Form ---------------*/
+body form {
+  margin: auto auto;
+  max-width: 20rem;
+  font-family: "Ubuntu", sans-serif;
+}
+form fieldset {
+  margin: 2rem 0;
+  border: 1px solid #445ba9;
+  border-radius: 10px;
+  padding: .5rem 2%;
+}
+form legend {
+  color: #445ba9;
+  margin: 0 1rem;
+  padding: 0 .5rem;
+}
+form label.top, form div {
+  display: block;
+  padding-top: 1rem;
+  color: #023e8a;
+  font-size: .8rem;
+  box-sizing: border-box;
+}
+form label.top input, form label.top select {
+  display:block;
+  font-size: 1rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+form label.sbs {
+  display: block;
+  padding: .75rem 0;
+  color: #555;
+}
+form input.submitBtn {
+  border:none;
+  background-color: #002363;
+  color: white;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;
+}
+form label.top input:required {
+  border-left: red solid 6px;
+}
+form label.top input:required:valid {
+  border-left: rgb(68, 248, 68) solid 6px;
+}
+
+/* gallery */
+figure {
+  background-color: #ddf3ff;
+  padding-bottom: 1em;
+}
+.container {
+  display: grid;
+  justify-content:center;
+  text-align:center;
+}
+
+figure img {
+  width: 300px;
+  height: auto;
+  margin: .5rem;
+  filter: blur(0em);
+  transition: filter 0.5s;
+}
+
+figure figcaption {
+  text-align: center;
+  font-family: Roboto;
+}
+
+figure img[data-src]{
+  filter: blur(0.2em);
+}
+
+/*   Upcoming Events   */
+
+#upcomingevents {
+  text-align: center;
+  background-color: #ddf3ff;
+  padding: 10px;
+}
+
+/*  old */
   header,
   footer {
     background-color: #0077b6;
@@ -96,6 +246,10 @@ html {
   .herodiv img {
     width: auto;
     height: auto;
+  }
+
+  .weathersumary h4 {
+    text-align: center;
   }
   
   .weathersumary {

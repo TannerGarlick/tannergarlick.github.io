@@ -1,4 +1,4 @@
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 75rem) {
     nav {
     display: flex;
     }
@@ -30,6 +30,28 @@
     .headings h1 {
       font-size: 3rem;
     }
+      /*  home  */
+    #towns section {
+      display: flex;
+      flex-direction: row;
+      max-width: 28%;
+    }
+
+    #towns section div {
+      background-color:wheat;
+    }
+
+    #towns {
+      max-width: 900px;
+    }
+    /* Gallery */
+    .container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .norm:hover {
+      box-shadow: 0 0 50px #333;
+    }
+      /*  old  */
     .m {
       letter-spacing: 1.5pt;
       font-size: larger;

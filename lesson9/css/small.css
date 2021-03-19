@@ -109,6 +109,8 @@ nav {
     align-items: center;
     border: 10px;
     border-color: white;
+    width: auto;
+    height: auto;
   }
 
   section p {

@@ -7,13 +7,13 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
 
-    <link href="../css/normalize.css" rel="stylesheet" />
-    <link href="css/small.css" rel="stylesheet" />
-    <link href="css/medium.css" rel="stylesheet" />
-    <link href="css/large.css" rel="stylesheet" />
+    <link href="/lesson11/css/normalize.css" rel="stylesheet" />
+    <link href="/lesson11/css/small.css" rel="stylesheet" />
+    <link href="/lesson11/css/medium.css" rel="stylesheet" />
+    <link href="/lesson11/css/large.css" rel="stylesheet" />
     <link
       rel="shortcut icon"
-      href="../lesson5/images/favicon.ico"
+      href="../lesson11/images/favicon.ico"
       type="image/x-icon"
     />
     <title>Fish Haven Town</title>
@@ -34,7 +34,7 @@
     <header>
       <img
         class="colimage"
-        src="../lesson3/images/WeatherLogo.png"
+        src="../lesson11/images/WeatherLogo.png"
         alt="The OCS of Idaho Logo"
       />
       <section class="headings">
@@ -86,35 +86,43 @@
       <div class="forcastbox">
         <div class="column-col">
           <div id="dayofweek1"></div>
-          &nbsp; <img src="../lesson6/images/mon.PNG" alt="forecast image1" id="icon1" />
+          &nbsp; <img src="../lesson11/images/mon.PNG" alt="forecast image1" id="icon1" />
           <div id="temp1"></div>
           &deg; F
         </div>
         <div class="column-col">
           <div id="dayofweek2"></div>
-          &nbsp; <img src="../lesson6/images/tue.PNG" alt="forecast image2" id="icon2" />
+          &nbsp; <img src="../lesson11/images/tue.PNG" alt="forecast image2" id="icon2" />
           <div id="temp2"></div>
           &deg; F
         </div>
         <div class="column-col">
           <div id="dayofweek3"></div>
-          &nbsp; <img src="../lesson6/images/wed.PNG" alt="forecast image3" id="icon3" />
+          &nbsp; <img src="../lesson11/images/wed.PNG" alt="forecast image3" id="icon3" />
           <div id="temp3"></div>
           &deg; F
         </div>
         <div class="column-col">
           <div id="dayofweek4"></div>
-          &nbsp; <img src="../lesson6/images/thur.PNG" alt="forecast image4" id="icon4" />
+          &nbsp; <img src="../lesson11/images/thur.PNG" alt="forecast image4" id="icon4" />
           <div id="temp4"></div>
           &deg; F
         </div>
         <div class="column-col">
           <div id="dayofweek5"></div>
-          &nbsp; <img src="../lesson6/images/fri.PNG" alt="forecast image5" id="icon5" />
+          &nbsp; <img src="../lesson11/images/fri.PNG" alt="forecast image5" id="icon5" />
           <div id="temp5"></div>
           &deg; F
         </div>
       </div>
+
+      <h3>Upcoming Events in Fish Haven</h3>
+      <section id="upcomingevents">
+        <p><span id="fishhaven"></span></p>
+        <p><span id="fishhaven2"></span></p>
+        <p><span id="fishhaven3"></span></p>
+        <p><span id="fishhaven4"></span></p>
+      </section>
 
       <div class="articlebox">
         <h3>Article Title</h3>
@@ -122,7 +130,7 @@
         <br />
         <img
           id="articleimg"
-          src="../lesson6/images/article_image_compress.jpg"
+          src="../lesson11/images/article_image_compress.jpg"
           alt="article image"
         />
         <p>
@@ -158,51 +166,51 @@
         <div class="textandsocial">
           <div class="info">
             <h4>Fish Haven Town</h4>
-            <p>2 N State St</p>
-            <p>Fish Haven, ID 83263</p>
+            <p>136 Maxwell Ave</p>
+            <p>Fish Haven, ID 83301</p>
             <p>111-111-1111</p>
-            <p>Fish Haventown@gmail.com</p>
+            <p>FishHaventown@gmail.com</p>
           </div>
 
           <div class="social-links">
             <p>
               <a href="https://www.youtube.com" target="_blank">
-                <img src="../lesson6/images/youtube.png" alt="YouTube icon"
+                <img src="../lesson11/images/youtube.png" alt="YouTube icon"
               /></a>
               <a href="https://www.twitter.com" target="_blank">
-                <img src="../lesson6/images/twitter.png" alt="Twitter icon"
+                <img src="../lesson11/images/twitter.png" alt="Twitter icon"
               /></a>
               <a href="https://www.google.com" target="_blank">
-                <img src="../lesson6/images/google.png" alt="Google icon"
+                <img src="../lesson11/images/google.png" alt="Google icon"
               /></a>
             </p>
           </div>
         </div>
-        <img src="../lesson6/images/preston_map.jpg" alt="Fish Haven map image" />
+        <img src="../lesson11/images/preston_map.jpg" alt="Fish Haven map image" />
       </div>
     </main>
 
     <!-- FOOTER HERE -->
     <footer>
       <span
-        >&copy; <span id="currentyear"> | Tanner Garlick </span>
-        <span
-          ><a href="https://www.byui.edu/online"> BYUI Online Learning </a>
-        </span>
+        >&copy; <span id="currentyear"></span> | Tanner Garlick | 
         Today's Date: <span id="currentdate"></span
-      ></span>
+      >
+      <span> | </span>
       <span
           ><a href="https://openweathermap.org/"> Open Weather Map </a>
         </span>
+      </span>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="js/forecast.js"></script>
-    <script src="js/weatherapi.js"></script>
-    <script src="../lesson6/js/webfontload.js"></script>
-    <script src="../lesson6/js/windchill.js"></script>
-    <script src="../lesson5/js/day.js"></script>
-    <script src="../lesson4/js/scripts.js"></script>
-    <script src="../js/currentdate.js"></script>
-    <script src="../js/date.js"></script>
+    <script src="../lesson11/js/events-fish.js"></script>
+    <script src="../lesson11/js/fishhaven.js"></script>
+    <script src="../lesson11/js/weatherapi-fish.js"></script>
+    <script src="../lesson11/js/webfontload.js"></script>
+    <script src="../lesson11/js/windchill.js"></script>
+    <script src="../lesson11/js/day.js"></script>
+    <script src="../lesson11/js/scripts.js"></script>
+    <script src="../lesson11/js/currentdate.js"></script>
+    <script src="../lesson11/js/date.js"></script>
   </body>
 </html>

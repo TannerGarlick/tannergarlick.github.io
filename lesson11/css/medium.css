@@ -1,4 +1,4 @@
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 50em) {
     nav {
     justify-content: center;
     }
@@ -20,8 +20,54 @@
       padding: 1.5rem;
       box-shadow: 0 0 30px #111;
       opacity: 0.8;
+      display: block;
+    }
+  /*  home  */
+    #towns {
+      max-width: 700px;
+      justify-content: space-between;
+      align-items: center;
+      justify-items: center;
+      margin: auto;
+    }
+
+    #towns div {
+      float: right;
+      text-align: center;
+      justify-content: flex-end;
+      padding: 8px;
+    }
+
+    main section {
+      display: flex;
+	    flex-direction: row;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    #towns img {
+      width: 300px;
+    }
+
+    main section:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    /*  Gallery  */
+    .container {
+      grid-template-columns: 1fr 1fr;
     }
   
+    figure img {
+      margin-right: .5rem;
+    }
+
+    /*   Upcoming Events   */
+
+    #upcomingevents {
+      display: block;
+      line-height: 1.8;
+    }
+    /*  old  */
     .articlebox img {
       max-width: 30%;
       float: right;

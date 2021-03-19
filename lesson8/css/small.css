@@ -130,6 +130,7 @@ form label.top, form div {
   padding-top: 1rem;
   color: #023e8a;
   font-size: .8rem;
+  box-sizing: border-box;
 }
 form label.top input, form label.top select {
   display:block;

@@ -13,15 +13,27 @@ nav {
     display: inline-block;
     margin: 0px;
     vertical-align: middle;
-    padding: 5rem;
+    padding: 1rem;
     }
 /*    home page    */
-main section {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+.container {
+    max-width: 700px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+  }
+  main section {
+    display: block;
+  }
+  .container img {
+    width: 300px;
+  }
+  
+  /*    events     */ 
+.events {
+    display:flex;
+    grid-template-columns: 1fr 1fr;
 }
-
 
 
 }

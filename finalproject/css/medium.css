@@ -1,0 +1,18 @@
+@media only screen and (min-width: 50em) {
+    /*  Nav  */
+nav {
+    justify-content: center;
+    }
+/*  contact   */
+.contactbox {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    }
+.textandsocial {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+    padding: 5rem;
+    }
+}

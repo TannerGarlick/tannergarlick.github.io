@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../finalproject/css/normalize.css" rel="stylesheet" />
+    <link href="../finalproject/css/small.css" rel="stylesheet" />
+    <link href="../finalproject/css/medium.css" rel="stylesheet" />
+    <link href="../finalproject/css/large.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="../finalproject/images/mvfavicon.ico"
+      type="image/x-icon"
+    />
+    <title>Home Page</title>
+    <meta
+      name="Moapa Valley Chamber of Commerce - Home Page"
+      content="Home Page Tanner Garlick in WDD 230: Web Frontend Development at Brigham Young University - Idaho"
+    />
+</head>
+<body>
+    <!-- HEADER HERE -->
+    <header>
+        <a href="https://tannergarlick.github.io/finalproject/intex.html">
+          <img class="colimage" src="../finalproject/images/moapa valley logo white.png" alt="Moapa Valley Chamber of Commerce Logo"
+        /></a>
+        <section class="headings">
+          <img src="../lesson11/images/homehero1.png" alt="hero image of mountain with city in Idaho" />
+          <h1>Moapa Valley Chamber of Commerce</h1>
+        </section>
+      </header>
+  
+      <!-- NAVIGATION HERE -->
+      <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="primaryNav" class="hide">
+          <li class ="active"><a href="../finalproject/index.html">Home</a></li>
+          <li class ="#"><a href="../finalproject/moapavalley.html">Moapa Valley</a></li>
+          <li class ="#"><a href="../finalproject/directory.html">Directory</a></li>
+          <li class ="#"><a href="../finalproject/join.html">Join</a></li>
+          <li class="#"><a href="../finalproject/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- CONTENT HERE -->
+      <main>
+        <h2>Home</h2>
+
+        <div class=container>
+          <div class=fair>
+          <figure>
+            <img class="norm" src="../finalproject/images/clark county fair.PNG" alt="Clark County Fair logo (Image taken from ccfair.com)" />
+            <p>The Clark County Fair is a large attraction for Moapa Valley. ect...</p>
+          </figure>
+        </div>
+          <figure>
+            <img class="norm" src="../finalproject/images/sugars logo.PNG" alt="Sugars Homeplate logo (image taken from sugarshomeplate.com)" />
+            <p>The Sugars Homeplate is a local . etc...</p>
+          </figure>
+          <figure>
+            <img class="norm" src="../finalproject/images/inside scoop logo.PNG" alt="Inside Scoop logo" />
+            <p>The Inside Scoop is a localy owned buisness . etc...</p>
+          </figure>
+        </div>
+        <h3>Welcome to Moapa Valley Chamber of Commerce</h3>
+        <img
+            id="redrockimg"
+            src="../finalproject/images/moapa valley rock image compress.jpg"
+            alt="Image of the red rocks in moapa valley."
+          />
+          <hr>
+            <h3>Upcoming Events</h3>
+          <div class=events>
+            <h4>Wild West Horseback Adventure</h4>
+            <img src="../finalproject/images/Wild-West-Breakfast-Horseback-Rideimage.jpg" alt="Horseback ride image from lasvegascalendars.com">
+            <p>Wild West Breakfast Horseback Ride is an adventure where </p>
+            <h4>The Clark County Fair and Rodeo</h4>
+            <img src="../finalproject/images/Clark-County-Fair-and-Rodeoimage.jpg" alt="Clark county fair image from bestfamilyescapes.com/">
+            <p>The Clark County Fair and Rodeo  </p>
+          </div>
+
+          <section class="weathersumary">
+            <h4>Weather Summary</h4>
+            <p>Currently: <span id="currently"></span></p>
+            <p>Temperature: <span id="temperature"></span> &deg; F</p>
+            <p>Humidity: <span id="humidity"></span> %</p>
+          </section>
+
+          <h3>3 Day Forecast</h3>
+      <div class="forcastbox">
+        <div class="column-col">
+          <div id="dayofweek1"></div>
+          &nbsp;
+          <img
+            src="../lesson11/images/mon.PNG"
+            alt="forecast image for one day away"
+            id="icon1"
+          />
+          <div id="temp1"></div>
+          &deg; F
+        </div>
+        <div class="column-col">
+          <div id="dayofweek2"></div>
+          &nbsp;
+          <img
+            src="../lesson11/images/tue.PNG"
+            alt="forecast image for two days away"
+            id="icon2"
+          />
+          <div id="temp2"></div>
+          &deg; F
+        </div>
+        <div class="column-col">
+          <div id="dayofweek3"></div>
+          &nbsp;
+          <img
+            src="../lesson11/images/wed.PNG"
+            alt="forecast image for three days away"
+            id="icon3"
+          />
+      </div>
+      </div>
+        <div class="jointoday">
+          <a href="https://tannergarlick.github.io/lesson11/join.html">
+          <img
+            id="joinimg"
+            src="../finalproject/images/join today2.png"
+            alt="join today image"
+          />
+        </a>
+        </div>
+
+      <h3>Contact Information</h3>
+      <div class="contactbox">
+        <br />
+        <div class="textandsocial">
+          <div class="info">
+            <h4>Tanner Garlick</h4>
+            <p>3011 N Moapa Valley Blvd</p>
+            <p>Moapa Valley, Nevada 89021</p>
+            <p>111-111-1111</p>
+            <p>MoapaValleyChamber@gmail.com</p>
+          </div>
+  
+          <div class="social-links">
+            <p>
+              <a href="https://www.google.com" target="_blank">
+                <img src="../finalproject/images/google.png" alt="Google icon"
+              /></a>
+              <a href="https://www.twitter.com" target="_blank">
+                <img src="../finalproject/images/twitter.png" alt="Twitter icon"
+              /></a>
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    </main>
+  
+      <!-- FOOTER HERE -->
+      <footer>
+        <span
+          >&copy; <span id="currentyear"></span> | Tanner Garlick |
+          <span
+            ><a href="../finalproject/attributions.html"> Attributions</a> | 
+          </span>
+          Last Updated: <span id="lastmodified"></span
+        >
+        <span> | </span>
+        <span
+            ><a href="https://openweathermap.org/"> Open Weather Map </a>
+          </span>
+        </span>
+      </footer>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+      <script src="../finalproject/js/nav.js"></script>
+      <script src="../finalproject/js/weatherapi.js"></script>
+      <script src="../finalproject/js/weatherforecast.js"></script>
+      <script src="../finalproject/js/lastmodified.js"></script>
+      <script src="../finalproject/js/date.js"></script>
+</body>
+</html>

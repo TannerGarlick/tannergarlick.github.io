@@ -10,7 +10,7 @@ fetch(requestURL)
     const cards = document.querySelector('#towns')
 
     towns.forEach(town => {
-      if(town.weblink == 'Fish Haven' || town.name == 'Preston' || town.name == 'Soda Springs')
+      if(town.name == 'Fish Haven' || town.name == 'Preston' || town.name == 'Soda Springs')
       {
       let card = document.createElement("section");
       let text = document.createElement('div');

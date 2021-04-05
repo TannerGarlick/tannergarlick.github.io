@@ -20,7 +20,7 @@ html {
     margin: 1rem 1rem;
   }
   nav {
-    background-color: #002363;
+    background-color: #264653;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
   }
@@ -89,6 +89,19 @@ html {
   /*    3 events home page    */
   .container figure img {
     max-width: 300px;
+    text-align: center;
+  }
+  .container section {
+    display: block;
+    justify-content:center;
+    text-align:center;
+    background-color: grey;
+    overflow: hidden;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    border-color: white;
+    max-width: 400px;
   }
    /*    Form   */
   body form {
@@ -147,13 +160,10 @@ html {
   border-left: rgb(68, 248, 68) solid 6px;
   }
 
-
-
-
     /*    footer/header    */
     header,
     footer {
-      background-color: #0077b6;
+      background-color: #2A9D8F;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -166,4 +176,18 @@ html {
     footer {
       font-family: "Roboto", sans-serif;
       text-align: center;
+    }
+    header .headings img {
+      float: none;
+      width: auto;
+      height: 250px;
+    }
+    header img .colimage {
+      float: left;
+    }
+    /*   fonts    */
+    h2,h3 {
+      font-family: 'Acme', sans-serif;
+      text-align: center;
+      font-size: 1.7rem;
     }

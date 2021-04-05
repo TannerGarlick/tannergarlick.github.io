@@ -15,4 +15,13 @@ nav {
     vertical-align: middle;
     padding: 5rem;
     }
+/*    home page    */
+main section {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+
+
 }

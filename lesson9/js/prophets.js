@@ -21,8 +21,7 @@ fetch(requestURL)
       pimg.setAttribute("src", prophet.imageurl);
       pimg.setAttribute(
         "alt",
-        `${prophet.name} ${prophet.lastname} - ${prophet.order}`
-      );
+        `${prophet.name} ${prophet.lastname} - ${prophet.order}`);
       pimg.style.boxShadow = "0 0 30px #333";
       card.append(h2);
       card.appendChild(p);

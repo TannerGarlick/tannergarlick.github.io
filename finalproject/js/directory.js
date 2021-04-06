@@ -23,11 +23,11 @@ fetch(requestURL)
       pimg.setAttribute("src", "images/" + business.imageurl);
       pimg.setAttribute("alt", "Image of " + business.name);
 
-      card.append(pimg);
-      text.append(h2);
-      text.append(p);
-      text.append(p2);
-      card.append(text);
+      pimg.append(pimg);
+      card.appendChild(h2);
+      card.appendChild(p);
+      card.appendChild(p2);
+      card.appendChild(text);
       cards.append(card);
     });
   });

@@ -225,7 +225,7 @@ html {
     border-radius: 10px;
     margin-top: 40px;
   }
-  main section {
+  main section  {
     padding: 10px;
   }
   /*       3 day forecast       */
@@ -257,7 +257,7 @@ html {
   }
   .jointoday p {
     font-size: 1.2rem;
-    
+
   }
   /*    main    */
   .topphoto {
@@ -281,6 +281,10 @@ html {
     footer {
       font-family: "Roboto", sans-serif;
       text-align: center;
+      position:fixed;
+      bottom:0;
+      left:0;
+      right:0
     }
     header .headings img {
       float: none;

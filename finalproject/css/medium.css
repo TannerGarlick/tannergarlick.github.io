@@ -28,11 +28,77 @@ nav {
   .container img {
     width: 300px;
   }
-  
+  main .topphoto {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .headings img {
+    max-width: 100%;
+    display: block;
+    float: none;
+    width: auto;
+    height: auto;
+  }
+  #par {
+    text-align: center;
+  }
+
   /*    events     */ 
 .events {
     display:flex;
     grid-template-columns: 1fr 1fr;
+}
+#history {
+  display: grid;
+  max-width: 700px;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+#history div {
+  float: right;
+  text-align: center;
+  justify-content: flex-end;
+  padding: 8px;
+}
+#history img {
+  text-align: center;
+}
+/*    directory    */
+.cards section {
+  width: 0 auto;
+  
+}
+.cards {
+  margin: auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 40px;
+}
+.cards section {
+  background-color: #FFE8D6;
+  margin: auto;
+  text-align: center;
+}
+#buttons button {
+  float: right;
+  font-size: 1.2rem;
+  display: block;
+}
+#buttons p {
+  overflow-wrap: normal;
+}
+.change .cards {
+  display:block;
+  justify-content: center;
+  text-align: center;
 }
 
 

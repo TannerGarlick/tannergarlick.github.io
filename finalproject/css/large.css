@@ -32,12 +32,13 @@
   }
 
   .container section p {
-    background-color: #f0b98c;
+    background-color: #FFE8D6;
     padding: 10px;
     border-radius: 10px;
   }
 
   .container {
+    display: grid;
     max-width: 1000px;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -52,7 +53,6 @@
   footer {
     margin: 0 auto;
   }
-
 
 
 

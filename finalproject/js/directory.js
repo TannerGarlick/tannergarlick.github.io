@@ -1,5 +1,5 @@
-const requestURL = "../finalproject/directory.json";
-fetch(requestURL)
+const request = "directory.json";
+fetch(request)
   .then(function (response) {
     return response.json();
   })
@@ -12,21 +12,23 @@ fetch(requestURL)
     businesses.forEach((business) => {
       let card = document.createElement("section");
       let text = document.createElement("div");
-      let h2 = document.createElement("h2");
+      let h3 = document.createElement("h3");
       let p = document.createElement("p");
-      let p2 = document.createElement("p");
+      let a = document.createElement("a");
       let pimg = document.createElement("img");
 
-      h2.innerHTML = business.name;
+      h3.innerHTML = business.name;
       p.innerHTML = business.phonenumber;
-      p2.innerHTML = business.weblink;
       pimg.setAttribute("src", "images/" + business.imageurl);
       pimg.setAttribute("alt", "Image of " + business.name);
+      a.setAttribute("href", business.weblink);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = business.name + " Website";
 
-      pimg.append(pimg);
-      card.appendChild(h2);
+      card.append(pimg);
+      card.appendChild(h3);
       card.appendChild(p);
-      card.appendChild(p2);
+      card.appendChild(a);
       card.appendChild(text);
       cards.append(card);
     });

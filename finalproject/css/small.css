@@ -20,7 +20,7 @@ html {
     margin: 1rem 1rem;
   }
   nav {
-    background-color: #264653;
+    background-color: #6B705C;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
   }
@@ -72,7 +72,7 @@ html {
   }
   /*   Contact box    */
   .contactbox {
-    background-color: #ddf3ff;
+    background-color: #FFE8D6;
     justify-content: space-between;
     margin: auto auto;
     border-top-left-radius: 10px;
@@ -91,12 +91,35 @@ html {
   .textandsocial {
     text-align: left;
   }
+  /* alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
   /*    3 events home page    */
   figure {
     padding-bottom: 1em;
   }
   .container {
-    display: grid;
     justify-content:center;
     text-align:center;
   }
@@ -150,19 +173,19 @@ html {
   }
   form fieldset {
   margin: 2rem 0;
-  border: 1px solid #445ba9;
+  border: 1px solid #CB997E;
   border-radius: 10px;
   padding: .5rem 2%;
   }
   form legend {
-  color: #445ba9;
+  color: #CB997E;
   margin: 0 1rem;
   padding: 0 .5rem;
   }
   form label.top, form div {
   display: block;
   padding-top: 1rem;
-  color: #023e8a;
+  color: #CB997E;
   font-size: .8rem;
   box-sizing: border-box;
   }
@@ -184,7 +207,7 @@ html {
   }
   form input.submitBtn {
   border:none;
-  background-color: #002363;
+  background-color: #264653;
   color: white;
   border-radius: 1rem;
   padding: .75rem 1.5rem;
@@ -210,7 +233,7 @@ html {
     box-shadow: 0 0 20px #333;
   }
   .events p {
-    background-color: #f0b98c;
+    background-color: #FFE8D6;
     padding: 10px;
     border-radius: 10px;
   }
@@ -218,7 +241,7 @@ html {
   .weathersumary {
     justify-content:center;
     text-align:center;
-    background-color: #f0b98c;
+    background-color: #FFE8D6;
     width: 300px;
     justify-content: space-between;
     margin: auto auto;
@@ -230,8 +253,9 @@ html {
   }
   /*       3 day forecast       */
   .forcastbox {
-    background-color: #ddf3ff;
+    background-color: #FFE8D6;
     display: grid;
+    border-radius: 10px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
   .forcastbox img {
@@ -256,19 +280,18 @@ html {
     margin: auto auto;
   }
   .jointoday p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 
   }
   /*    main    */
-  .topphoto {
-    justify-content: center;
+  main .topphoto {
     max-width: 100%;
     width: auto; 
   }
     /*    footer/header    */
     header,
     footer {
-      background-color: #2A9D8F;
+      background-color: #CB997E;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -287,16 +310,72 @@ html {
       right:0
     }
     header .headings img {
-      float: none;
-      width: auto;
-      height: 250px;
+      display:none;
     }
     header img .colimage {
       float: left;
     }
     /*   fonts    */
-    h2,h3 {
+    h2 {
       font-family: 'Acme', sans-serif;
       text-align: center;
       font-size: 1.7rem;
+      color: #264653;
     }
+    h3 {
+      font-family: 'Heebo', sans-serif;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #264653;
+    }
+    p {
+      font-family: 'Noto Serif', serif;
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+    #paragraph {
+      text-indent: 50px;
+    }
+    #history img {
+      width: 400px;
+      max-width: 100%;
+      box-shadow: 0 0 20px #333;
+    }
+    iframe {
+      text-align: center;
+      max-width: 100%;
+    }
+    #demographic {
+    background-color: #FFE8D6;
+    justify-content: space-between;
+    margin: auto auto;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    max-width: 400px;
+    }
+    /*    Directory   */ 
+    .cards img {
+      max-width: 200px;
+      width: 100%;
+    }
+    #buttons button {
+      display: none;
+    }
+    .cards section {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+  /*   Thank you page   */
+  .checkmark {
+text-align: center;
+  }
+  /*   contact   */
+#board {
+  text-align: center;
+  background-color: #FFE8D6;
+  border-radius: 10px; 
+  padding: 10px;
+}  

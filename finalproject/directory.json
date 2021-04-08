@@ -3,43 +3,43 @@
     {
         "name": "McDonald's",
         "phonenumber": "702-397-6736",
-        "imageurl": "../images/mcdonalds image.PNG",
+        "imageurl": "../images/mcdonaldsimage.PNG",
         "weblink": "https://www.mcdonalds.com/us/en-us/location/nv/overton/310-s-moapa-blvd/21851.html"
     },
     {
         "name": "Maverik",
         "phonenumber": "702-847-7469",
-        "imageurl": "../images/maverik image.PNG",
+        "imageurl": "../images/maverikimage.PNG",
         "weblink": "https://goo.gl/maps/Cp2ZWzzGPpr55xNx8"
     },
     {
         "name": "Green Valley Grocery",
         "phonenumber": "702-398-3400",
-        "imageurl": "../images/Green Valley Grocery image.PNG",
+        "imageurl": "../images/greenvalleygroceryimage.PNG",
         "weblink": "https://www.gvgrocery.com/store/green-valley-grocery-58/"
     },
     {
         "name": "Lin's",
         "phonenumber": "702-397-2312",
-        "imageurl": "../images/lins image.PNG",
+        "imageurl": "../images/linsimage.PNG",
         "weblink": "https://linsgrocery.com/?loc=overton"
     },
     {
         "name": "Inside Scoop",
         "phonenumber": "702-397-2055",
-        "imageurl": "../images/inside scoop logo.PNG",
+        "imageurl": "../images/insidescooplogo.PNG",
         "weblink": "https://www.facebook.com/insidescoop395/"
     },
     {
         "name": "Sugars Homeplate",
         "phonenumber": "702-397-8084",
-        "imageurl": "../images/sugars logo.PNG",
+        "imageurl": "../images/sugarslogo.PNG",
         "weblink": "http://www.sugarshomeplate.com/"
     },
     {
         "name": "Ace Hardware",
         "phonenumber": "702-397-2289",
-        "imageurl": "../images/ace image.PNG",
+        "imageurl": "../images/aceimage.PNG",
         "weblink": "https://www.acehardware.com/store-details/10963"
     }
 ]

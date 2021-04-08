@@ -296,10 +296,10 @@ html {
       align-items: center;
       justify-content: center;
       padding: 5px 0;
-      color: white;
+      color: black;
     }
     footer a {
-      color: white;
+      color: black;
     }
     footer {
       font-family: "Roboto", sans-serif;

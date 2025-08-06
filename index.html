@@ -480,4 +480,10 @@
         });
     </script>
 </body>
+    <script>
+  var password = prompt("Enter password to view this site:");
+  if (password !== "yourpassword") {
+    document.body.innerHTML = "Access Denied";
+  }
+</script>
 </html>

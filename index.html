@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanner Garlick - Home Lab Portfolio</title>
     <script>
-      // Prompt the user for a password
-      var correctPassword = "justfornow";
-      var userPassword = prompt("Enter the password to view this site:");
-
-      if (userPassword !== correctPassword) {
-        // If password is wrong, replace the whole page content
-        document.write("<h1>Access Denied</h1>");
-        // Stop further script execution
-        throw new Error("Unauthorized access");
+      var password = prompt("Enter password to view this site:");
+      if (password !== "yourpassword") {
+        document.body.innerHTML = "Access Denied";
       }
     </script>
     <style>

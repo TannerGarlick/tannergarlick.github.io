@@ -3,10 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Tanner Garlick - Home Lab Portfolio</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            padding: 30px 10%;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 10%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            margin-top: 50px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            main {
+                padding: 20px 5%;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Tanner Garlick</h1>
+        <p>Home Lab Enthusiast & Technology Explorer</p>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About My Home Lab</h2>
+            <p>Welcome to my home lab showcase! This is where I experiment with cutting-edge technologies, build innovative solutions, and continuously expand my technical expertise. My home lab serves as a playground for learning new technologies, testing enterprise solutions, and developing skills that bridge the gap between theoretical knowledge and practical implementation.</p>
+            <p>From virtualization and containerization to networking and automation, my lab environment allows me to explore the latest trends in technology while maintaining a hands-on approach to learning.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Kubernetes Cluster</h3>
+                    <p>Multi-node Kubernetes cluster running on bare metal servers with automated deployment pipelines and monitoring solutions.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Infrastructure as Code</h3>
+                    <p>Automated infrastructure deployment using Terraform and Ansible for consistent and reproducible environments.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Ansible</span>
+                        <span class="tech-tag">GitLab CI</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Homelab Network</h3>
+                    <p>Enterprise-grade network setup with VLANs, pfSense firewall, and comprehensive monitoring and logging.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">pfSense</span>
+                        <span class="tech-tag">UniFi</span>
+                        <span class="tech-tag">VLAN</span>
+                        <span class="tech-tag">ELK Stack</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Virtualization Platform</h3>
+                    <p>Proxmox-based virtualization environment hosting multiple VMs and containers for various services and testing.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Proxmox</span>
+                        <span class="tech-tag">LXC</span>
+                        <span class="tech-tag">ZFS</span>
+                        <span class="tech-tag">Backup</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Automated testing and deployment pipeline with integrated security scanning and quality gates.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">Nexus</span>
+                        <span class="tech-tag">Docker Registry</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Monitoring & Observability</h3>
+                    <p>Comprehensive monitoring solution with metrics, logs, and traces for full system observability.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">Jaeger</span>
+                        <span class="tech-tag">AlertManager</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Virtualization & Containers</h3>
+                    <ul>
+                        <li>VMware vSphere</li>
+                        <li>Proxmox VE</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>LXC/LXD</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Terraform</li>
+                        <li>Ansible</li>
+                        <li>CloudFormation</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Networking</h3>
+                    <ul>
+                        <li>pfSense/OPNsense</li>
+                        <li>UniFi</li>
+                        <li>VLANs</li>
+                        <li>VPN</li>
+                        <li>Network Monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Monitoring & Observability</h3>
+                    <ul>
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Nagios</li>
+                        <li>PRTG</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Interested in discussing technology, collaboration opportunities, or have questions about my home lab setup? Feel free to reach out!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Website</h3>
+                    <p>tannergarlick.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>View my code repositories</p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p>Professional networking</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tanner Garlick. Built with passion for technology and continuous learning.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 0, 0, 0.4)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.2)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections and project cards
+        document.querySelectorAll('section, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     }
     [data-theme="light"]{ --bg:#f7f8fc; --bg-elev:#ffffff; --text:#141826; --muted:#4a556d; --brand:#315efb; --brand-2:#6f3bff; --ok:#157f3b; --warn:#a86b00; --err:#b3261e; --card:#ffffff; --chip-bg:#eef2ff; --border:#dbe2f1; --link:#1f4cf1; --shadow:0 12px 28px rgba(17,24,39,.15);}
 
-    *{box-sizing:border-box} html,body{height:100%} body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:var(--bg); color:var(--text);}
+    *{box-sizing:border-box} html,body{height:100% overflow-x:hidden;} body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:var(--bg); color:var(--text);}
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
 
     header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px); background:color-mix(in lab, var(--bg) 70%, transparent); border-bottom:1px solid var(--border)}
@@ -57,15 +57,40 @@
     .muted{color:var(--muted)}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
 
-    /* Rotating gallery */
-    .gallery{position:relative; overflow:hidden; border-radius:12px}
-    .gallery .stage{position:relative; height:260px; background:var(--chip-bg); border:1px solid var(--border)}
-    .gallery .stage img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .6s ease}
-    .gallery .stage img.active{opacity:1}
-    .gallery .nav{position:absolute; top:50%; left:0; right:0; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 6px}
-    .gallery .nav button{background:rgba(0,0,0,.35); color:#fff; border:0; padding:6px 10px; border-radius:999px; cursor:pointer}
+    
+/* === Reworked Carousel === */
+.carousel{--ratio:16/9; --bg:var(--bg-elev); --br:16px; --shadow:0 12px 36px rgba(0,0,0,.35);
+  position:relative; border-radius:var(--br); background:var(--bg); border:1px solid var(--border); box-shadow:var(--shadow); overflow:hidden}
+.carousel .viewport{position:relative; width:100%; aspect-ratio:var(--ratio); background:var(--chip-bg)}
+.carousel .slides{display:grid; grid-auto-flow:column; grid-auto-columns:100%; height:100%; transition:transform .5s ease; will-change:transform}
+.carousel .slide{position:relative; width:100%; height:100%}
+.carousel .slide img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block}
+.carousel .caption{position:absolute; left:0; right:0; bottom:0; padding:10px 14px; background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%); color:#fff; font-size:.95rem}
 
-    @media (max-width:960px){
+.carousel .nav-btn{position:absolute; top:50%; transform:translateY(-50%); border:0; padding:10px 12px; border-radius:999px;
+  background:rgba(0,0,0,.45); color:#fff; cursor:pointer; transition:background .2s; z-index:2}
+.carousel .nav-btn:hover{background:rgba(0,0,0,.6)}
+.carousel .prev{left:10px} .carousel .next{right:10px}
+
+.carousel .dots{position:absolute; left:0; right:0; bottom:8px; display:flex; justify-content:center; gap:8px; z-index:2}
+.carousel .dot{width:9px; height:9px; border-radius:50%; border:1px solid rgba(255,255,255,.6); background:rgba(255,255,255,.25); cursor:pointer}
+.carousel .dot.active{background:#fff}
+
+.carousel .thumbs{display:flex; gap:8px; overflow:auto; padding:10px; background:var(--bg-elev); border-top:1px solid var(--border)}
+.carousel .thumbs img{width:90px; height:64px; object-fit:cover; border-radius:8px; opacity:.7; cursor:pointer; border:1px solid var(--border)}
+.carousel .thumbs img.active{outline:2px solid var(--brand); opacity:1}
+
+@media (max-width:960px){
+  .carousel{--ratio:4/3}
+  .carousel .thumbs img{width:76px; height:54px}
+}
+@media (max-width:640px){
+  .carousel{--ratio:1/1}
+  .carousel .thumbs{padding:8px}
+  .carousel .thumbs img{width:64px; height:64px}
+}
+
+@media (max-width:960px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
       .lab-arch{grid-template-columns:1fr}
@@ -81,7 +106,8 @@
       .card, .chip, .kpi{box-shadow:none}
       a::after{content:" (" attr(href) ")"; font-size:.9em}
     }
-  </style>
+  #hobbies .card{padding:0; border:none; background:transparent; box-shadow:none}
+</style>
 </head>
 <body>
   <a href="#main" style="position:absolute; left:-9999px">Skip to content</a>
@@ -100,7 +126,7 @@
       </nav>
       <div class="spacer"></div>
       <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
-      <a class="btn" href="/Tanner Garlick Resume 2025.pdf" target="_blank" rel="noopener">Download Resume</a>
+      <a class="btn" href="/Tanner Garlick Resume 2025.docx" target="_blank" rel="noopener">Download Resume</a>
     </div>
   </header>
 
@@ -242,26 +268,38 @@
     </section>
 
     <!-- Hobbies with auto galleries -->
-    <section id="hobbies" aria-labelledby="hobbies-title">
-      <h2 class="section-title" id="hobbies-title">Hobbies</h2>
-      <p class="section-sub">Drop photos into <code>/images/mtb</code> or <code>/images/kayak</code> and they’ll auto‑populate below.</p>
-      <div class="grid">
-        <div class="card">
-          <h3>Mountain Biking</h3>
-          <div class="gallery" id="mtbGallery">
-            <div class="stage"></div>
-            <div class="nav"><button data-prev>‹</button><button data-next>›</button></div>
-          </div>
+    
+<section id="hobbies" aria-labelledby="hobbies-title">
+  <h2 class="section-title" id="hobbies-title">Hobbies</h2>
+  <p class="section-sub">Photos load automatically from <code>/images/mtb</code> and <code>/images/kayak</code> (via <code>gallery.json</code>).</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Mountain Biking</h3>
+      <div class="carousel" id="mtbCarousel">
+        <button class="nav-btn prev" aria-label="Previous">‹</button>
+        <button class="nav-btn next" aria-label="Next">›</button>
+        <div class="viewport">
+          <div class="slides" role="list"></div>
+          <div class="dots" aria-hidden="true"></div>
         </div>
-        <div class="card">
-          <h3>Kayaking</h3>
-          <div class="gallery" id="kayakGallery">
-            <div class="stage"></div>
-            <div class="nav"><button data-prev>‹</button><button data-next>›</button></div>
-          </div>
-        </div>
+        <div class="thumbs" aria-label="Thumbnails"></div>
       </div>
-    </section>
+    </div>
+    <div class="card">
+      <h3>Kayaking</h3>
+      <div class="carousel" id="kayakCarousel">
+        <button class="nav-btn prev" aria-label="Previous">‹</button>
+        <button class="nav-btn next" aria-label="Next">›</button>
+        <div class="viewport">
+          <div class="slides" role="list"></div>
+          <div class="dots" aria-hidden="true"></div>
+        </div>
+        <div class="thumbs" aria-label="Thumbnails"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-title">
@@ -301,48 +339,82 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Rotating galleries — load from gallery.json or directory index
-    function makeGallery(path, elId){
-      const el = document.getElementById(elId); if(!el) return;
-      const stage = el.querySelector('.stage');
-      const prevBtn = el.querySelector('[data-prev]');
-      const nextBtn = el.querySelector('[data-next]');
-      let urls = [];
-      const build = () => {
-        if (!urls.length) { stage.innerHTML = '<div class="muted" style="padding:14px">No images found in '+path+'</div>'; return; }
-        stage.innerHTML = '';
-        urls.forEach((u,i)=>{ const im=new Image(); im.loading='lazy'; im.src=u; if(i===0) im.classList.add('active'); stage.appendChild(im); });
-        let idx = 0, timer = null;
-        const show = i => { const ims=[...stage.querySelectorAll('img')]; ims.forEach((im,k)=> im.classList.toggle('active', k===i)); idx=i; };
-        const step = d => show((idx + d + urls.length)%urls.length);
-        prevBtn.onclick = ()=> step(-1);
-        nextBtn.onclick = ()=> step(1);
-        timer = setInterval(()=> step(1), 4000);
-        el.addEventListener('mouseenter', ()=> clearInterval(timer));
-        el.addEventListener('mouseleave', ()=> timer = setInterval(()=> step(1), 4000));
-      };
+    
+// ===== Reworked Carousel Builder =====
+function buildCarousel(folder, mountId){
+  const root = document.getElementById(mountId);
+  if(!root) return;
+  const slidesEl = root.querySelector('.slides');
+  const dotsEl = root.querySelector('.dots');
+  const thumbsEl = root.querySelector('.thumbs');
+  const prevBtn = root.querySelector('.prev');
+  const nextBtn = root.querySelector('.next');
+  let urls = [], idx = 0, timer = null;
 
-      const load = async ()=>{
-        try {
-          const r = await fetch(path.replace(/\/$/,'/') + 'gallery.json', {cache:'no-store'});
-          if (r.ok) { const arr = await r.json(); urls = arr.map(n => n.startsWith('http')? n : path.replace(/\/$/,'/') + n); }
-        } catch(e){}
-        if (!urls.length) {
-          try {
-            const r = await fetch(path, {cache:'no-store'});
-            if(r.ok) {
-              const html = await r.text();
-              const matches = html.match(/href=\"([^\"]+\.(?:png|jpe?g|webp|gif))\"/gi) || [];
-              urls = [...new Set(matches.map(m => m.replace(/^href=\"|\"$/g,'')).map(h => h.startsWith('http')? h : path.replace(/\/$/,'/') + h))];
-            }
-          } catch(e){}
-        }
-        build();
-      };
-      load();
-    }
-    makeGallery('/images/mtb/', 'mtbGallery');
-    makeGallery('/images/kayak/', 'kayakGallery');
-  </script>
+  const setIndex = (i)=>{
+    idx = (i + urls.length) % urls.length;
+    slidesEl.style.transform = `translateX(-${idx*100}%)`;
+    dotsEl.querySelectorAll('.dot').forEach((d,k)=> d.classList.toggle('active', k===idx));
+    thumbsEl.querySelectorAll('img').forEach((t,k)=> t.classList.toggle('active', k===idx));
+  };
+
+  const step = (d)=> setIndex(idx + d);
+
+  prevBtn.onclick = ()=> step(-1);
+  nextBtn.onclick = ()=> step(1);
+
+  const startAuto = ()=> timer = setInterval(()=> step(1), 4500);
+  const stopAuto = ()=> { if(timer) clearInterval(timer); timer=null; };
+  root.addEventListener('mouseenter', stopAuto);
+  root.addEventListener('mouseleave', ()=> { if(!timer) startAuto(); });
+
+  const onKey = (e)=>{
+    if (!root.matches(':hover')) return;
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  };
+  window.addEventListener('keydown', onKey);
+
+  // Touch/drag swipe
+  let startX = 0, swiping = false;
+  root.addEventListener('pointerdown', (e)=>{ swiping=true; startX=e.clientX; stopAuto(); });
+  root.addEventListener('pointerup', (e)=>{
+    if(!swiping) return;
+    const dx = e.clientX - startX;
+    if(Math.abs(dx) > 30) step(dx<0 ? 1 : -1);
+    swiping=false; startAuto();
+  });
+
+  // Load images (manifest only for GitHub Pages)
+  fetch(folder.replace(/\/$/, '/') + 'gallery.json', {cache:'no-store'})
+    .then(r => r.ok ? r.json() : [])
+    .then(list => {
+      urls = (list||[]).map(n => n.startsWith('http')? n : folder.replace(/\/$/,'/') + n);
+      if(!urls.length){
+        slidesEl.innerHTML = '<div class="slide" style="display:flex;align-items:center;justify-content:center;color:var(--muted)"><span>No images found in '+folder+'</span></div>';
+        return;
+      }
+      slidesEl.innerHTML = urls.map(u => `
+        <div class="slide" role="listitem">
+          <img src="${u}" alt="">
+          <div class="caption">${u.split('/').pop()}</div>
+        </div>`).join('');
+      dotsEl.innerHTML = urls.map((_,i)=> `<button class="dot" aria-label="Go to slide ${i+1}"></button>`).join('');
+      thumbsEl.innerHTML = urls.map((u,i)=> `<img src="${u}" alt="thumb ${i+1}" data-i="${i}">`).join('');
+
+      dotsEl.querySelectorAll('.dot').forEach((d,i)=> d.onclick = ()=> setIndex(i));
+      thumbsEl.querySelectorAll('img').forEach((t,i)=> t.onclick = ()=> setIndex(i));
+
+      setIndex(0);
+      startAuto();
+    })
+    .catch(()=>{
+      slidesEl.innerHTML = '<div class="slide" style="display:flex;align-items:center;justify-content:center;color:var(--muted)"><span>Unable to load gallery.json</span></div>';
+    });
+}
+buildCarousel('/images/mtb/', 'mtbCarousel');
+buildCarousel('/images/kayak/', 'kayakCarousel');
+
+</script>
 </body>
 </html>

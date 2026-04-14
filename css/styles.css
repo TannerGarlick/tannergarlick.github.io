@@ -71,7 +71,7 @@ section {
 
 /* HERO SECTION */
 .hero {
-  min-height: calc(50vh - 56px);
+  min-height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -322,21 +322,6 @@ h2 {
   font-family: var(--mono);
 }
 
-/* RESUME CALL TO ACTION */
-.resume-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 2rem 2.5rem;
-  gap: 1.5rem;
-}
-
-.resume-text h3 { font-size: 18px; font-weight: 400; margin-bottom: 0.25rem; color: var(--text); }
-.resume-text p { font-size: 14px; color: var(--muted); font-weight: 300; }
-
 /* CONTACT SECTION */
 .contact-grid {
   display: grid;
@@ -420,6 +405,5 @@ footer {
 @media (max-width: 600px) {
   .about-grid, .projects-grid, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
   .exp-item { grid-template-columns: 1fr; gap: 0.25rem; }
-  .resume-cta { flex-direction: column; align-items: flex-start; }
   .nav-links { display: none; }
 }

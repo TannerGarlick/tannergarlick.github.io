@@ -22,7 +22,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet"
     >
-    <link rel="stylesheet" href="css/styles.css?v=7">
+    <link rel="stylesheet" href="css/styles.css?v=8">
 
     <link
         rel="icon"
@@ -606,7 +606,7 @@
                     >
                 </div>
                 <figcaption>
-                    Chasing views and finding new places to explore
+                    Exploring new places and spending time near the water
                 </figcaption>
             </figure>
 
@@ -619,7 +619,7 @@
                     >
                 </div>
                 <figcaption>
-                    Desert trails, two wheels, and plenty of dust
+                    Mountain biking in southern Nevada
                 </figcaption>
             </figure>
 
@@ -632,7 +632,7 @@
                     >
                 </div>
                 <figcaption>
-                    Beautiful views are always worth the trip
+                    Hiking in the mountains
                 </figcaption>
             </figure>
         </div>
@@ -712,9 +712,116 @@
 
 </main>
 
+
+<!-- IMAGE LIGHTBOX -->
+<div
+    class="image-lightbox"
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded image"
+    aria-hidden="true"
+>
+    <button
+        type="button"
+        class="image-lightbox__close"
+        aria-label="Close expanded image"
+    >
+        &times;
+    </button>
+
+    <div class="image-lightbox__content">
+        <img class="image-lightbox__image" src="" alt="">
+        <p class="image-lightbox__caption"></p>
+    </div>
+</div>
+
 <footer>
     © 2026 Tanner Garlick — tannergarlick.com
 </footer>
+
+
+<script>
+(function () {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = lightbox.querySelector('.image-lightbox__image');
+    const lightboxCaption = lightbox.querySelector('.image-lightbox__caption');
+    const closeButton = lightbox.querySelector('.image-lightbox__close');
+
+    let lastFocusedElement = null;
+
+    const images = document.querySelectorAll(
+        '.project-card img, .outside-work-photo img, .comparison-card img'
+    );
+
+    function getCaption(image) {
+        const figure = image.closest('figure');
+        const figcaption = figure ? figure.querySelector('figcaption') : null;
+
+        return figcaption
+            ? figcaption.textContent.trim()
+            : image.alt.trim();
+    }
+
+    function openLightbox(image) {
+        lastFocusedElement = document.activeElement;
+
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt || '';
+        lightboxCaption.textContent = getCaption(image);
+
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+
+        closeButton.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+
+        lightboxImage.src = '';
+        lightboxImage.alt = '';
+        lightboxCaption.textContent = '';
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
+    }
+
+    images.forEach((image) => {
+        image.classList.add('lightbox-enabled');
+        image.setAttribute('tabindex', '0');
+        image.setAttribute('role', 'button');
+        image.setAttribute('aria-label', `Open larger image: ${image.alt}`);
+
+        image.addEventListener('click', () => openLightbox(image));
+
+        image.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openLightbox(image);
+            }
+        });
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+            closeLightbox();
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

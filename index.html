@@ -28,89 +28,6 @@
         rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22white%22 /></svg>"
     >
-
-    <style>
-        /* Outside of Work section */
-        .personal-intro {
-            max-width: 760px;
-            margin-bottom: 2rem;
-        }
-
-        .personal-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-        }
-
-        .personal-gallery figure {
-            margin: 0;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .personal-gallery img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
-            transition: transform 180ms ease;
-        }
-
-        .personal-gallery figure:hover img {
-            transform: scale(1.02);
-        }
-
-        .personal-gallery figcaption {
-            padding: 0.8rem 1rem;
-            font-family: "DM Mono", monospace;
-            font-size: 0.78rem;
-            line-height: 1.5;
-            opacity: 0.75;
-        }
-
-        @media (max-width: 850px) {
-            .personal-gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .personal-gallery figure:last-child {
-                grid-column: 1 / -1;
-            }
-
-            .personal-gallery figure:last-child img {
-                aspect-ratio: 16 / 9;
-                object-position: center 42%;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .personal-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .personal-gallery figure:last-child {
-                grid-column: auto;
-            }
-
-            .personal-gallery figure:last-child img {
-                aspect-ratio: 4 / 5;
-                object-position: center;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .personal-gallery img {
-                transition: none;
-            }
-
-            .personal-gallery figure:hover img {
-                transform: none;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
@@ -643,55 +560,60 @@
         </div>
     </section>
 
-
     <!-- OUTSIDE OF WORK -->
-    <section id="outside-work">
+    <section id="outside-work" class="outside-work-section">
         <div class="section-label">05 - Outside of Work</div>
         <h2>When I’m not coding</h2>
 
-        <p class="personal-intro">
+        <p class="outside-work-intro">
             When I’m not working on a website or learning something new, I enjoy
             mountain biking, kayaking, hiking, and getting outside. I especially
             enjoy exploring trails and spending time around the mountains and water.
         </p>
 
-        <div class="personal-gallery">
-            <figure>
-                <img
-                    src="images/tanner-mountain-biking.jpg"
-                    alt="Tanner mountain biking on a desert trail"
-                    loading="lazy"
-                    width="1536"
-                    height="2048"
-                >
+        <div class="outside-work-gallery">
+            <figure class="outside-work-photo outside-work-photo--featured">
+                <div class="outside-work-image-frame">
+                    <img
+                        src="images/tanner-outdoors-coast.jpg"
+                        alt="Tanner standing near the water beside a long pier"
+                        loading="lazy"
+                        width="1600"
+                        height="700"
+                    >
+                </div>
+                <figcaption>Exploring new places and spending time near the water</figcaption>
+            </figure>
+
+            <figure class="outside-work-photo">
+                <div class="outside-work-image-frame">
+                    <img
+                        src="images/tanner-outdoors-biking.jpg"
+                        alt="Tanner mountain biking on a desert trail"
+                        loading="lazy"
+                        width="900"
+                        height="675"
+                    >
+                </div>
                 <figcaption>Mountain biking in southern Nevada</figcaption>
             </figure>
 
-            <figure>
-                <img
-                    src="images/tanner-coastal-overlook.jpg"
-                    alt="Tanner at a coastal overlook surrounded by water and islands"
-                    loading="lazy"
-                    width="1536"
-                    height="2048"
-                >
-                <figcaption>Exploring the coast and spending time near the water</figcaption>
-            </figure>
-
-            <figure>
-                <img
-                    src="images/tanner-mountain-lake.jpg"
-                    alt="Tanner hiking near a mountain lake"
-                    loading="lazy"
-                    width="1542"
-                    height="2048"
-                >
+            <figure class="outside-work-photo">
+                <div class="outside-work-image-frame">
+                    <img
+                        src="images/tanner-outdoors-hiking.jpg"
+                        alt="Tanner hiking near a mountain lake"
+                        loading="lazy"
+                        width="900"
+                        height="675"
+                    >
+                </div>
                 <figcaption>Hiking in the mountains</figcaption>
             </figure>
         </div>
     </section>
 
-    <!-- CONTACT -->
+<!-- CONTACT -->
     <section id="contact">
         <div class="section-label">06 - Contact</div>
         <h2>Get in touch</h2>

@@ -3,20 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanner Garlick - IT Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>Tanner Garlick | Web Developer & Software QA</title>
+    <meta
+        name="description"
+        content="Portfolio of Tanner Garlick, a web developer and IT specialist with experience in JavaScript, Shopify development, Python automation, functional testing, and production deployments."
+    >
+
+    <meta property="og:title" content="Tanner Garlick | Web Developer & Software QA">
+    <meta
+        property="og:description"
+        content="JavaScript, Shopify development, Python automation, functional testing, and software quality assurance."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tannergarlick.com/">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22white%22 /></svg>">
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22white%22 /></svg>"
+    >
+
+    <style>
+        /* Outside of Work section */
+        .personal-intro {
+            max-width: 760px;
+            margin-bottom: 2rem;
+        }
+
+        .personal-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .personal-gallery figure {
+            margin: 0;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .personal-gallery img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            transition: transform 180ms ease;
+        }
+
+        .personal-gallery figure:hover img {
+            transform: scale(1.02);
+        }
+
+        .personal-gallery figcaption {
+            padding: 0.8rem 1rem;
+            font-family: "DM Mono", monospace;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            opacity: 0.75;
+        }
+
+        @media (max-width: 850px) {
+            .personal-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .personal-gallery figure:last-child {
+                grid-column: 1 / -1;
+            }
+
+            .personal-gallery figure:last-child img {
+                aspect-ratio: 16 / 9;
+                object-position: center 42%;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .personal-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .personal-gallery figure:last-child {
+                grid-column: auto;
+            }
+
+            .personal-gallery figure:last-child img {
+                aspect-ratio: 4 / 5;
+                object-position: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .personal-gallery img {
+                transition: none;
+            }
+
+            .personal-gallery figure:hover img {
+                transform: none;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-<nav>
-    <span class="nav-logo">tanner.garlick</span>
+<nav aria-label="Primary navigation">
+    <a class="nav-logo" href="#home">tanner.garlick</a>
+
     <ul class="nav-links">
         <li><a href="#about">about</a></li>
         <li><a href="#projects">projects</a></li>
         <li><a href="#experience">experience</a></li>
         <li><a href="#skills">skills</a></li>
+        <li><a href="#outside-work">outside work</a></li>
         <li><a href="#contact">contact</a></li>
     </ul>
 </nav>
@@ -25,14 +132,38 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-label">IT Portfolio</div>
+        <div class="hero-label">Software Development & QA Portfolio</div>
+
         <h1>Tanner<br><strong>Garlick</strong></h1>
+
         <p class="hero-desc">
-            CompTIA Security+ Certified IT Specialist focused on cybersecurity, risk mitigation, and protecting organizational assets through robust technical solutions.
+            Web developer and IT specialist with hands-on experience building,
+            testing, troubleshooting, and deploying updates for a production
+            Shopify website. My work includes JavaScript, HTML, CSS, Shopify
+            Liquid, Python automation, functional testing, and production support.
         </p>
+
         <div class="hero-actions">
-            <a href="https://tannergarlick.com/Tanner%20Garlick%20Resume%202026.pdf" target="_blank" class="btn-primary">Download Resume</a>
-            <a href="#projects" class="btn-secondary">View my work</a>
+            <!-- Replace this PDF with your final SDET-targeted resume before publishing. -->
+            <a
+                href="Tanner%20Garlick%20Resume%202026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+            >
+                View Resume
+            </a>
+
+            <a href="#projects" class="btn-secondary">View Projects</a>
+
+            <a
+                href="https://github.com/TannerGarlick"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary"
+            >
+                GitHub
+            </a>
         </div>
     </section>
 
@@ -40,31 +171,42 @@
     <section id="about">
         <div class="section-label">01 - About</div>
         <h2>A bit about me</h2>
+
         <div class="about-grid">
             <div class="about-text">
                 <p>
-                    I am a dedicated IT professional with a Bachelor of Science in Information Technology and a strong focus on cybersecurity. My experience revolves around securing e-commerce platforms, hardening systems, and managing complex network infrastructures.
+                    I manage website development and quality assurance for a production
+                    Shopify store. My work includes building website features, testing
+                    changes in a preview environment, deploying updates, and confirming
+                    that customer-facing workflows work correctly after release.
                 </p>
+
                 <p>
-                    I specialize in vulnerability remediation, incident response, and enforcing least-privilege access to ensure organizational integrity. I am driven by the challenge of mitigating evolving cyber threats and delivering secure, reliable technical environments.
+                    I also build Python tools that automate repetitive business processes.
+                    I am currently building hands-on experience with JavaScript test
+                    automation, WebdriverIO, GitHub Actions, and CI/CD.
                 </p>
             </div>
+
             <div class="about-info">
                 <div class="info-row">
                     <span class="info-label">Location</span>
-                    <span class="info-value">Logandale, NV</span>
+                    <span class="info-value">Logandale, Nevada</span>
                 </div>
+
                 <div class="info-row">
-                    <span class="info-label">Field</span>
-                    <span class="info-value">Cybersecurity & IT</span>
+                    <span class="info-label">Focus</span>
+                    <span class="info-value">Web Development & Software QA</span>
                 </div>
+
                 <div class="info-row">
                     <span class="info-label">Certification</span>
-                    <span class="info-value" style="color: var(--accent);">CompTIA Security+</span>
+                    <span class="info-value">CompTIA Security+</span>
                 </div>
+
                 <div class="info-row">
-                    <span class="info-label">Status</span>
-                    <span class="info-value" style="color: var(--accent);">Open to work</span>
+                    <span class="info-label">Current Learning</span>
+                    <span class="info-value">WebdriverIO & CI/CD</span>
                 </div>
             </div>
         </div>
@@ -74,35 +216,40 @@
     <section id="projects">
         <div class="section-label">02 - Projects</div>
         <h2>Selected work</h2>
+
         <div class="projects-list">
 
-            <!-- ============================================= -->
-            <!-- PROJECT 1: WEBDRIVERIO TEST AUTOMATION -->
-            <!-- ============================================= -->
-            <div class="project-card project-card--featured">
+            <!-- PROJECT 1: WEBDRIVERIO -->
+            <article class="project-card project-card--featured">
                 <div class="project-labels">
                     <span class="project-tag">Personal Project</span>
                     <span class="project-tag project-tag--status">In Progress</span>
                 </div>
-                <div class="project-title">WebdriverIO Test Automation Framework</div>
+
+                <h3 class="project-title">WebdriverIO Test Automation</h3>
+
                 <p class="project-desc">
-                    A browser test-automation framework built to demonstrate the skills used in a Software Development Engineer in Test role: writing maintainable automated tests, structuring a page object model, and running tests automatically through a CI/CD pipeline.
+                    An in-progress JavaScript test automation project using WebdriverIO
+                    to practice browser testing, page objects, selectors, assertions,
+                    test data, and automated test execution.
                 </p>
 
                 <div class="meta-block">
-                    <span class="meta-label">My contribution</span>
-                    <p class="fill-in">[Describe what you personally built: e.g. the page objects, the test suite structure, the CI workflow file, and which scenarios you automated first.]</p>
+                    <span class="meta-label">Current work</span>
+                    <ul class="meta-list">
+                        <li>Setting up a WebdriverIO project with Node.js</li>
+                        <li>Writing tests for valid and invalid user workflows</li>
+                        <li>Organizing selectors and actions with page objects</li>
+                        <li>Documenting project setup, test scenarios, and results</li>
+                    </ul>
                 </div>
 
                 <div class="meta-block">
-                    <span class="meta-label">Testing / QA work performed</span>
+                    <span class="meta-label">Next steps</span>
                     <ul class="meta-list">
-                        <li>Automated browser tests written with WebdriverIO and Node.js</li>
-                        <li>Test cases using both valid and invalid test data</li>
-                        <li>CSS selectors used to locate and interact with page elements</li>
-                        <li>Assertions to verify expected application behavior</li>
-                        <li>Page Object Model used to keep tests maintainable</li>
-                        <li>Tests executed automatically through GitHub Actions on each commit</li>
+                        <li>Add a GitHub Actions workflow to run tests automatically</li>
+                        <li>Publish the finished project and README on GitHub</li>
+                        <li>Add screenshots of passing test results</li>
                     </ul>
                 </div>
 
@@ -114,240 +261,264 @@
                     <span class="tech-tag">CI/CD</span>
                 </div>
 
-                <div class="meta-block">
-                    <span class="meta-label">Project status</span>
-                    <ul class="status-list">
-                        <li class="status-done"><span class="status-icon">✓</span> <span class="fill-in">[List what's actually completed and working today]</span></li>
-                        <li class="status-progress"><span class="status-icon">◐</span> <span class="fill-in">[List what you're currently building]</span></li>
-                        <li class="status-planned"><span class="status-icon">○</span> <span class="fill-in">[List features you plan to add next]</span></li>
-                    </ul>
-                </div>
+                <!--
+                    Add a project link only after the repository is ready.
 
-                <!-- PLACEHOLDER: link this to the GitHub repository for this project -->
-                <div class="project-links">
-                    <a href="#" class="project-link link-placeholder">GitHub Repository →</a>
-                    <!-- PLACEHOLDER: link to the project README, if hosted separately -->
-                    <a href="#" class="project-link link-placeholder">README →</a>
-                </div>
+                    Example:
+                    <div class="project-links">
+                        <a href="YOUR_REPOSITORY_URL" target="_blank"
+                           rel="noopener noreferrer" class="project-link">
+                            View Code →
+                        </a>
+                    </div>
+                -->
+            </article>
 
-                <!-- PLACEHOLDER: insert a screenshot of a passing/failing test run here -->
-                <div class="media-placeholder">Screenshot placeholder — test-results output</div>
-
-                <!-- PLACEHOLDER: insert a screenshot of the GitHub Actions workflow run here -->
-                <div class="media-placeholder">Screenshot placeholder — GitHub Actions workflow result</div>
-            </div>
-
-            <!-- ============================================= -->
-            <!-- PROJECT 2: SOURCE 4 INDUSTRIES WEBSITE DEV & QA -->
-            <!-- ============================================= -->
-            <div class="project-card">
+            <!-- PROJECT 2: SOURCE 4 INDUSTRIES -->
+            <article class="project-card">
                 <div class="project-labels">
                     <span class="project-tag">Professional Work</span>
                     <span class="project-tag project-tag--status">Development & QA</span>
                 </div>
-                <div class="project-title">Source 4 Industries — Website Development & QA</div>
+
+                <h3 class="project-title">Source 4 Industries Website Development & QA</h3>
+
                 <p class="project-desc">
-                    I manage development, quality assurance, and deployment work for Source 4 Industries' production Shopify website — building and testing customer-facing features, then deploying and re-verifying them on the live site.
+                    I manage development, testing, and deployment work for the company’s
+                    production Shopify website. I build customer-facing updates, test
+                    them in a preview environment, publish approved changes, and verify
+                    the live website after release.
                 </p>
 
                 <div class="meta-block">
-                    <span class="meta-label">Responsibilities</span>
+                    <span class="meta-label">Selected responsibilities</span>
                     <ul class="meta-list">
-                        <li>Modifying JavaScript, HTML, CSS, and Shopify Liquid</li>
-                        <li>Building and updating customer-facing website features</li>
-                        <li>Testing changes in duplicate themes and a preview environment before release</li>
-                        <li>Deploying approved changes to the production website</li>
-                        <li>Testing the live website after each deployment</li>
-                        <li>Troubleshooting website defects</li>
-                        <li>Testing customer workflows on both desktop and mobile devices</li>
-                        <li>Maintaining daily theme backups</li>
-                        <li>Cleaning and validating website and business data</li>
+                        <li>Modify JavaScript, HTML, CSS, and Shopify Liquid</li>
+                        <li>Build and update customer-facing website features</li>
+                        <li>Test changes in duplicate themes and a preview environment</li>
+                        <li>Deploy approved changes and verify them in production</li>
+                        <li>Troubleshoot defects and test desktop and mobile workflows</li>
+                        <li>Clean and validate website and business data</li>
                     </ul>
                 </div>
 
                 <div class="tech-tags">
-                    <span class="tech-tag">Shopify Liquid</span>
                     <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">HTML/CSS</span>
-                    <span class="tech-tag">Manual & Cross-Browser QA</span>
+                    <span class="tech-tag">Shopify Liquid</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Functional Testing</span>
                 </div>
 
                 <details class="case-detail">
-                    <summary>Case study: Vendor badge feature</summary>
+                    <summary>Vendor badge feature</summary>
+
                     <p class="case-detail-text">
-                        A business requirement called for a promotional badge to appear next to the product title, but only for products belonging to a specific set of vendors. I translated this into Shopify theme logic that conditionally renders the badge based on the product's vendor field.
+                        I added Shopify theme logic that automatically displays a
+                        promotional badge beside the product title when a product belongs
+                        to a selected vendor.
                     </p>
+
                     <ul class="meta-list">
-                        <li>Conditional rendering added to the product template in the Shopify theme</li>
-                        <li>Tested products that should display the badge and confirmed it appeared correctly</li>
-                        <li>Tested products that should <em>not</em> display the badge and confirmed it stayed hidden</li>
-                        <li>Verified the result in a duplicate/preview theme before deployment, then re-verified on the live site after deployment</li>
+                        <li>Translated a business request into conditional theme logic</li>
+                        <li>Tested products that should and should not display the badge</li>
+                        <li>Verified the update in a duplicate theme before release</li>
+                        <li>Confirmed the feature again after production deployment</li>
                     </ul>
                 </details>
 
                 <details class="case-detail">
-                    <summary>Case study: Shopify theme migration</summary>
+                    <summary>Shopify theme migration</summary>
+
                     <p class="case-detail-text">
-                        I helped lead the move from an outdated Shopify theme built on deprecated code to a newer theme, rebuilding functionality that didn't carry over automatically.
+                        I helped lead the move from an outdated Shopify theme that used
+                        deprecated code to a newer theme, rebuilding affected functionality
+                        and testing customer workflows throughout the migration.
                     </p>
+
                     <ul class="meta-list">
-                        <li>Reviewed differences in structure and functionality between the old and new themes</li>
-                        <li>Moved and rebuilt affected functionality in the new theme</li>
-                        <li>Tested navigation, product pages, collections, customer notifications, links, and responsive layouts</li>
-                        <li>Tested customer workflows end-to-end in a duplicate theme and preview environment</li>
-                        <li>Corrected problems found before launch</li>
-                        <li>Validated the production website after the new theme went live</li>
+                        <li>Reviewed differences between the old and new themes</li>
+                        <li>Moved and rebuilt functionality that did not transfer automatically</li>
+                        <li>Tested navigation, product pages, collections, links, and responsive layouts</li>
+                        <li>Corrected issues in the preview environment before launch</li>
+                        <li>Validated the production website after deployment</li>
                     </ul>
-                    <span class="meta-label">Before / after</span>
-                    <div class="before-after-grid">
-                        <!-- PLACEHOLDER: insert "before" screenshot of the old theme here (remove customer/business data) -->
-                        <div class="media-placeholder">Before — old theme</div>
-                        <!-- PLACEHOLDER: insert "after" screenshot of the new theme here -->
-                        <div class="media-placeholder">After — new theme</div>
-                    </div>
+
+                    <!-- Add approved, sanitized before-and-after screenshots here. -->
                 </details>
-
-                <!--
-                  REMINDER before publishing any screenshots from this project:
-                  - Get company approval first
-                  - Remove all customer information
-                  - Remove private administrative details
-                  - Blur any confidential business data
-                  - Do not publish proprietary source code
-                -->
-
-                <p class="case-note">
-                    This case study covers only the work I personally performed on the site. I did not personally design or code every part of Source4Industries.com.
-                </p>
 
                 <div class="project-links">
-                    <a href="https://www.source4industries.com" target="_blank" class="project-link">View Source4Industries.com (production site) →</a>
+                    <a
+                        href="https://www.source4industries.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Production Website →
+                    </a>
                 </div>
-            </div>
+            </article>
 
-            <!-- ============================================= -->
-            <!-- PROJECT 3: PYTHON TRANSACTION COMPARISON TOOL -->
-            <!-- ============================================= -->
-            <div class="project-card">
+            <!-- PROJECT 3: PYTHON TOOL -->
+            <article class="project-card">
                 <div class="project-labels">
                     <span class="project-tag">Professional Tool</span>
                     <span class="project-tag project-tag--status">Python Automation</span>
                 </div>
-                <div class="project-title">Python Transaction Comparison Tool</div>
+
+                <h3 class="project-title">Python Transaction Comparison Tool</h3>
+
                 <p class="project-desc">
-                    A Python program that reads two monthly Excel transaction files and compares records between them to identify matching transactions and determine whether they were completed during the month — replacing a repetitive manual comparison process and saving the accounting team hours of work each month.
+                    I built a Python program that compares two monthly Excel transaction
+                    files, identifies matching records, and helps determine whether
+                    transactions were completed during the month.
                 </p>
 
                 <div class="meta-block">
-                    <span class="meta-label">My contribution</span>
-                    <p class="fill-in">[Describe the specific comparison logic you wrote, how the two Excel files are matched, and roughly how much manual time it replaces per month.]</p>
-                </div>
-
-                <div class="meta-block">
-                    <span class="meta-label">Testing / QA work performed</span>
+                    <span class="meta-label">Impact and testing</span>
                     <ul class="meta-list">
-                        <li>Data validation to confirm matched transactions were accurate</li>
-                        <li>Error checking for missing, duplicate, or malformed rows</li>
-                        <li>Verified results against manual comparisons before rollout</li>
+                        <li>Replaced a repetitive manual spreadsheet comparison process</li>
+                        <li>Saves the accounting team hours of work each month</li>
+                        <li>Validates matched records before results are used</li>
+                        <li>Checks for missing, duplicate, and malformed rows</li>
+                        <li>Was compared against manual results before regular use</li>
                     </ul>
                 </div>
 
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Spreadsheet Processing</span>
+                    <span class="tech-tag">Excel Processing</span>
                     <span class="tech-tag">Data Matching</span>
                     <span class="tech-tag">Data Validation</span>
                 </div>
 
                 <p class="case-note">
-                    Real transaction, customer, and accounting data cannot be shown. Any demonstration or screenshot uses mock/sanitized data only.
+                    Real transaction and accounting data are private. Any public
+                    demonstration will use mock or sanitized data.
                 </p>
+            </article>
 
-                <!-- PLACEHOLDER: insert a screenshot using mock/sanitized data here -->
-                <div class="media-placeholder">Screenshot placeholder — mock data demo</div>
-            </div>
-
-            <!-- ============================================= -->
-            <!-- PROJECT 4: NEVCON.ORG -->
-            <!-- ============================================= -->
-            <div class="project-card">
+            <!-- PROJECT 4: ACADEMIC WEBSITE -->
+            <article class="project-card">
                 <div class="project-labels">
-                    <span class="project-tag">Live Website</span>
-                    <span class="project-tag project-tag--status">AI-Assisted Development</span>
+                    <span class="project-tag">Academic Project</span>
+                    <span class="project-tag project-tag--status">BYU-Idaho</span>
                 </div>
-                <div class="project-title">NEVCON.org</div>
+
+                <h3 class="project-title">Moapa Valley Chamber of Commerce Website</h3>
+
                 <p class="project-desc">
-                    Designed and built the website using Lovable, then tested, refined, and deployed the finished experience. The site supports the Nevada homeschool convention with event information, speaker information, convention schedules, vendor information, and calls to action across responsive desktop and mobile layouts.
+                    A responsive, multi-page chamber of commerce website created for a
+                    BYU-Idaho web development course. The project demonstrates frontend
+                    development, dynamic content, form workflows, JSON processing, and
+                    third-party API integration.
                 </p>
 
                 <div class="meta-block">
-                    <span class="meta-label">My contribution</span>
+                    <span class="meta-label">What I built</span>
                     <ul class="meta-list">
-                        <li class="fill-in">[Describe the original requirements you were given]</li>
-                        <li class="fill-in">[List the pages or features you personally built]</li>
-                        <li class="fill-in">[Describe any code you personally edited]</li>
-                        <li class="fill-in">[Describe problems you diagnosed]</li>
-                        <li class="fill-in">[Describe mobile or desktop issues you corrected]</li>
-                        <li class="fill-in">[Describe the testing you performed]</li>
-                        <li class="fill-in">[Describe deployment or domain configuration you handled]</li>
-                        <li class="fill-in">[Describe any ongoing maintenance you provide]</li>
+                        <li>Responsive layouts using separate mobile, tablet, and desktop styles</li>
+                        <li>Multi-page navigation, membership, directory, and contact experiences</li>
+                        <li>A business directory generated from local JSON data with JavaScript</li>
+                        <li>Weather and forecast components using JavaScript fetch requests</li>
+                        <li>Forms with validation and confirmation pages</li>
+                        <li>Mobile navigation and dynamic date information</li>
                     </ul>
+                </div>
+
+                <div class="tech-tags">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JSON</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Responsive Design</span>
+                </div>
+
+                <p class="case-note">
+                    Built as an academic project. The repository should be cleaned and
+                    its weather API configuration updated before adding a public live-demo link.
+                </p>
+
+                <div class="project-links">
+                    <a
+                        href="https://github.com/TannerGarlick"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View GitHub Profile →
+                    </a>
+                </div>
+
+                <!--
+                    Replace the GitHub profile link above with the exact project repository.
+                    Add a live-demo link only after completing the fixes in the review file.
+                -->
+            </article>
+
+            <!-- PROJECT 5: LIVE WEBSITES -->
+            <article class="project-card">
+                <div class="project-labels">
+                    <span class="project-tag">Live Websites</span>
+                    <span class="project-tag project-tag--status">Built with Lovable</span>
+                </div>
+
+                <h3 class="project-title">NEVCON.org & Home-Educated.org</h3>
+
+                <p class="project-desc">
+                    Built and refined two public websites using Lovable. My work included
+                    organizing content, reviewing generated code, testing desktop and
+                    mobile layouts, correcting issues, and preparing the sites for public use.
+                </p>
+
+                <div class="meta-block">
+                    <span class="meta-label">NEVCON.org</span>
+                    <ul class="meta-list">
+                        <li>Built pages for convention information, speakers, schedules, and vendors</li>
+                        <li>Tested navigation, calls to action, and responsive layouts</li>
+                        <li>Refined content and corrected issues before launch</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a
+                        href="https://nevcon.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View NEVCON.org →
+                    </a>
+                </div>
+
+                <div class="meta-block">
+                    <span class="meta-label">Home-Educated.org</span>
+                    <ul class="meta-list">
+                        <li>Built and refined educational resource and directory content</li>
+                        <li>Tested navigation, forms, calls to action, and responsive behavior</li>
+                        <li>Corrected layout and usability issues before public release</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a
+                        href="https://home-educated.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+                        View Home-Educated.org →
+                    </a>
                 </div>
 
                 <div class="tech-tags">
                     <span class="tech-tag">Lovable</span>
                     <span class="tech-tag">Responsive Design</span>
-                    <span class="tech-tag">Manual QA</span>
+                    <span class="tech-tag">Functional Testing</span>
+                    <span class="tech-tag">Deployment</span>
                 </div>
-
-                <!-- PLACEHOLDER: replace with a real screenshot from nevcon.org -->
-                <div class="media-placeholder">Screenshot placeholder — real screenshot from nevcon.org</div>
-
-                <div class="project-links">
-                    <a href="https://nevcon.org" target="_blank" class="project-link">View NEVCON.org →</a>
-                </div>
-            </div>
-
-            <!-- ============================================= -->
-            <!-- PROJECT 5: HOME-EDUCATED.ORG -->
-            <!-- ============================================= -->
-            <div class="project-card">
-                <div class="project-labels">
-                    <span class="project-tag">Live Website</span>
-                    <span class="project-tag project-tag--status">AI-Assisted Development</span>
-                </div>
-                <div class="project-title">Home-Educated.org</div>
-                <p class="project-desc">
-                    Built and refined the website using Lovable, with responsibility for testing the user experience, correcting issues, and preparing the site for public use. The site provides resources for homeschool and alternative-education families, including educational content, resource pages, events, directory-related content, and sign-up calls to action.
-                </p>
-
-                <div class="meta-block">
-                    <span class="meta-label">My contribution</span>
-                    <ul class="meta-list">
-                        <li class="fill-in">[Describe the requirements you received]</li>
-                        <li class="fill-in">[List the pages or components you built]</li>
-                        <li class="fill-in">[Describe any code you personally modified]</li>
-                        <li class="fill-in">[Describe forms or workflows you tested]</li>
-                        <li class="fill-in">[Describe responsive issues you corrected]</li>
-                        <li class="fill-in">[Describe content or data structures you managed]</li>
-                        <li class="fill-in">[Describe deployment work you handled]</li>
-                        <li class="fill-in">[Describe ongoing updates and maintenance you provide]</li>
-                    </ul>
-                </div>
-
-                <div class="tech-tags">
-                    <span class="tech-tag">Lovable</span>
-                    <span class="tech-tag">Responsive Design</span>
-                    <span class="tech-tag">Manual QA</span>
-                </div>
-
-                <!-- PLACEHOLDER: replace with a real screenshot from home-educated.org -->
-                <div class="media-placeholder">Screenshot placeholder — real screenshot from home-educated.org</div>
-
-                <div class="project-links">
-                    <a href="https://home-educated.org" target="_blank" class="project-link">View Home-Educated.org →</a>
-                </div>
-            </div>
+            </article>
 
         </div>
     </section>
@@ -356,36 +527,55 @@
     <section id="experience">
         <div class="section-label">03 - Experience</div>
         <h2>Work history</h2>
+
         <div class="experience-list">
-            <div class="exp-item">
+            <article class="exp-item">
                 <div class="exp-date">Apr 2022 — Present</div>
+
                 <div>
-                    <div class="exp-role">Information Technology Specialist</div>
+                    <h3 class="exp-role">Information Technology Specialist</h3>
                     <div class="exp-company">Source 4 Industries</div>
-                    <p class="exp-desc">Managing security posture for e-commerce and internal systems. Focused on enforcing least privilege in Windows Active Directory, deploying critical security patches, and managing multi-factor authentication (MFA). Proactively investigated phishing and adware incidents while ensuring data integrity during software migrations and backups.</p>
+
+                    <p class="exp-desc">
+                        Manage development and quality assurance for the company’s
+                        production Shopify website. Build and test features using
+                        JavaScript, HTML, CSS, and Shopify Liquid; troubleshoot defects;
+                        deploy updates; and verify customer workflows after release.
+                        Also develop Python tools that automate repetitive business tasks.
+                    </p>
+
                     <div class="exp-tags">
-                        <span class="exp-tag">Windows Active Directory</span>
-                        <span class="exp-tag">MFA</span>
-                        <span class="exp-tag">System Hardening</span>
-                        <span class="exp-tag">Incident Response</span>
-                        <span class="exp-tag">Networking</span>
+                        <span class="exp-tag">JavaScript</span>
+                        <span class="exp-tag">Shopify Liquid</span>
+                        <span class="exp-tag">Functional Testing</span>
+                        <span class="exp-tag">Python Automation</span>
+                        <span class="exp-tag">Production Deployment</span>
                     </div>
                 </div>
-            </div>
-            <div class="exp-item">
-                <div class="exp-date">Jan 2019 - Jul 2022</div>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-date">Jan 2019 — Jul 2022</div>
+
                 <div>
-                    <div class="exp-role">Student Information Technology</div>
+                    <h3 class="exp-role">Student Information Technology</h3>
                     <div class="exp-company">BYU-Idaho</div>
-                    <p class="exp-desc">Designed and developed secure web applications and databases. Installed and configured network infrastructure and servers while resolving critical software vulnerabilities and security issues.</p>
+
+                    <p class="exp-desc">
+                        Designed and developed web applications, software programs, and
+                        databases using JavaScript, Java, HTML, and CSS while testing,
+                        debugging, and troubleshooting code.
+                    </p>
+
                     <div class="exp-tags">
+                        <span class="exp-tag">JavaScript</span>
+                        <span class="exp-tag">Java</span>
+                        <span class="exp-tag">HTML/CSS</span>
                         <span class="exp-tag">Web Development</span>
-                        <span class="exp-tag">Database Security</span>
-                        <span class="exp-tag">VMware</span>
-                        <span class="exp-tag">Troubleshooting</span>
+                        <span class="exp-tag">Debugging</span>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -393,65 +583,182 @@
     <section id="skills">
         <div class="section-label">04 - Skills</div>
         <h2>Technical skills</h2>
+
         <div class="skills-grid">
             <div class="skill-group">
-                <div class="skill-group-title">Cybersecurity</div>
+                <div class="skill-group-title">Programming & Web Development</div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Active Directory</span>
-                    <span class="skill-tag">Vulnerability Mgmt</span>
-                    <span class="skill-tag">Incident Response</span>
-                    <span class="skill-tag">System Hardening</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">Networking</div>
-                <div class="skill-tags">
-                    <span class="skill-tag">VMware</span>
-                    <span class="skill-tag">DNS / DHCP</span>
-                    <span class="skill-tag">Firewalls</span>
-                    <span class="skill-tag">TCP/IP</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">Programming</div>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Shopify Liquid</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Test Automation & Development Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">WebdriverIO</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Visual Studio Code</span>
+                    <span class="skill-tag">CI/CD Fundamentals</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Software Quality</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Functional Testing</span>
+                    <span class="skill-tag">Debugging</span>
+                    <span class="skill-tag">Defect Troubleshooting</span>
+                    <span class="skill-tag">Release Validation</span>
+                    <span class="skill-tag">Cross-Device Testing</span>
+                    <span class="skill-tag">Data Validation</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Development Practices</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Agile Familiarity</span>
+                    <span class="skill-tag">Scrum Familiarity</span>
+                    <span class="skill-tag">CI/CD Fundamentals</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Security</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">CompTIA Security+</span>
+                    <span class="skill-tag">Access Controls</span>
+                    <span class="skill-tag">MFA</span>
+                    <span class="skill-tag">Vulnerability Awareness</span>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- OUTSIDE OF WORK -->
+    <section id="outside-work">
+        <div class="section-label">05 - Outside of Work</div>
+        <h2>When I’m not coding</h2>
+
+        <p class="personal-intro">
+            When I’m not working on a website or learning something new, I enjoy
+            mountain biking, kayaking, hiking, and getting outside. I especially
+            enjoy exploring trails and spending time around the mountains and water.
+        </p>
+
+        <div class="personal-gallery">
+            <figure>
+                <img
+                    src="images/tanner-mountain-biking.jpg"
+                    alt="Tanner mountain biking on a desert trail"
+                    loading="lazy"
+                    width="1536"
+                    height="2048"
+                >
+                <figcaption>Mountain biking in southern Nevada</figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/tanner-coastal-overlook.jpg"
+                    alt="Tanner at a coastal overlook surrounded by water and islands"
+                    loading="lazy"
+                    width="1536"
+                    height="2048"
+                >
+                <figcaption>Exploring the coast and spending time near the water</figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/tanner-mountain-lake.jpg"
+                    alt="Tanner hiking near a mountain lake"
+                    loading="lazy"
+                    width="1542"
+                    height="2048"
+                >
+                <figcaption>Hiking in the mountains</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact">
-        <div class="section-label">05 - Contact</div>
+        <div class="section-label">06 - Contact</div>
         <h2>Get in touch</h2>
+
         <div class="contact-grid">
             <div class="contact-info">
-                <p>I'm currently seeking roles in Cybersecurity and IT Infrastructure. If you're looking for a Security+ certified professional with a background in secure systems management, let's connect.</p>
+                <p>
+                    I am interested in opportunities involving software quality,
+                    web development, and JavaScript test automation. You can contact
+                    me by email or connect with me through LinkedIn or GitHub.
+                </p>
+
                 <div class="contact-links">
                     <a href="mailto:tannergarlick@gmail.com" class="contact-link">
-                        <span class="contact-link-icon">@</span>
+                        <span class="contact-link-icon" aria-hidden="true">@</span>
                         tannergarlick@gmail.com
                     </a>
-                    <a href="https://www.linkedin.com/in/tannergarlick/" target="_blank" class="contact-link">
-                        <span class="contact-link-icon">in</span>
+
+                    <a
+                        href="https://www.linkedin.com/in/tannergarlick/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                    >
+                        <span class="contact-link-icon" aria-hidden="true">in</span>
                         linkedin.com/in/tannergarlick
                     </a>
-                    <a href="https://github.com/TannerGarlick" target="_blank" class="contact-link">
-                        <span class="contact-link-icon">gh</span>
+
+                    <a
+                        href="https://github.com/TannerGarlick"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                    >
+                        <span class="contact-link-icon" aria-hidden="true">gh</span>
                         github.com/TannerGarlick
                     </a>
                 </div>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/mbdqlqrb" method="POST">
-              <input type="text" name="name" placeholder="Your name" required />
-              <input type="email" name="_replyto" placeholder="Your email" required />
-              <textarea name="message" placeholder="Your message" required></textarea>
-              <input type="hidden" name="_subject" value="New Portfolio Message from TannerGarlick.com" />
-              <button type="submit" class="btn-primary" style="align-self: flex-start;">Send message</button>
+
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/mbdqlqrb"
+                method="POST"
+            >
+                <label for="contact-name">Your name</label>
+                <input id="contact-name" type="text" name="name" autocomplete="name" required>
+
+                <label for="contact-email">Your email</label>
+                <input
+                    id="contact-email"
+                    type="email"
+                    name="_replyto"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="contact-message">Your message</label>
+                <textarea id="contact-message" name="message" required></textarea>
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Portfolio Message from TannerGarlick.com"
+                >
+
+                <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </div>
     </section>
@@ -459,7 +766,7 @@
 </main>
 
 <footer>
-    © 2026 Tanner Garlick - tannergarlick.com
+    © 2026 Tanner Garlick — tannergarlick.com
 </footer>
 
 </body>

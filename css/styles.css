@@ -408,25 +408,15 @@ footer {
   .nav-links { display: none; }
 }
 
-
-/* OUTSIDE OF WORK */
-
-.outside-work-intro {
-  max-width: 700px;
-  margin: 0 0 2rem;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.outside-work-gallery {
+/* SOURCE 4 THEME BEFORE AND AFTER */
+.before-after-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  width: 100%;
+  margin-top: 1.25rem;
 }
 
-.outside-work-photo {
+.comparison-card {
   margin: 0;
   min-width: 0;
   overflow: hidden;
@@ -435,52 +425,91 @@ footer {
   border-radius: 8px;
 }
 
-.outside-work-photo--featured {
-  grid-column: 1 / -1;
-}
-
-.outside-work-image-frame {
+.comparison-image-frame {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 300px;
   overflow: hidden;
   background: var(--surface2);
 }
 
-.outside-work-photo--featured .outside-work-image-frame {
-  aspect-ratio: 16 / 7;
-}
-
-.outside-work-image-frame img {
+.comparison-image-frame img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 
-.outside-work-photo figcaption {
-  padding: 0.8rem 1rem;
+.comparison-card figcaption {
+  padding: 0.75rem 1rem;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 11px;
   line-height: 1.5;
 }
 
-@media (max-width: 700px) {
-  .outside-work-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .outside-work-photo--featured {
-    grid-column: auto;
-  }
-
-  .outside-work-photo--featured .outside-work-image-frame,
-  .outside-work-image-frame {
-    aspect-ratio: 4 / 3;
-  }
+/* OUTSIDE OF WORK */
+.outside-work-intro {
+  max-width: 700px;
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
-/* Prevent the extra navigation item from crowding medium screens. */
+#outside-work .outside-work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+#outside-work .outside-work-photo {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#outside-work .outside-work-image-frame {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: var(--surface2);
+}
+
+#outside-work .outside-work-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#outside-work .outside-work-photo:first-child img {
+  object-position: center 45%;
+}
+
+#outside-work .outside-work-photo:nth-child(2) img {
+  object-position: center 65%;
+}
+
+#outside-work .outside-work-photo:nth-child(3) img {
+  object-position: center 40%;
+}
+
+#outside-work .outside-work-photo figcaption {
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 @media (max-width: 900px) {
   .nav-links {
     gap: 1rem;
@@ -489,29 +518,52 @@ footer {
   .nav-links a {
     font-size: 12px;
   }
+
+  #outside-work .outside-work-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #outside-work .outside-work-photo:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.5rem);
+    justify-self: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
-  .outside-work-gallery {
+  .before-after-grid {
     grid-template-columns: 1fr;
   }
 
-  .outside-work-photo--featured {
-    grid-column: auto;
+  .comparison-image-frame {
+    height: 230px;
   }
 
-  .outside-work-photo--featured .outside-work-image-frame,
-  .outside-work-image-frame {
-    aspect-ratio: 4 / 3;
+  #outside-work .outside-work-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  #outside-work .outside-work-photo:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  #outside-work .outside-work-image-frame {
+    height: 240px;
+  }
+
+  #outside-work .outside-work-photo figcaption {
+    min-height: 0;
   }
 }
 
-@media (max-width: 600px) {
-  .outside-work-intro {
-    margin-bottom: 1.5rem;
+@media (max-width: 480px) {
+  .comparison-image-frame {
+    height: 190px;
   }
 
-  .outside-work-photo figcaption {
-    min-height: 0;
+  #outside-work .outside-work-image-frame {
+    height: 210px;
   }
 }

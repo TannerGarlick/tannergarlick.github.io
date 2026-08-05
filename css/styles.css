@@ -567,3 +567,203 @@ footer {
     height: 210px;
   }
 }
+/* PROJECT COMPONENTS — COMPLETE STYLES */
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-card--featured {
+  border-color: rgba(45, 140, 255, 0.38);
+}
+
+.project-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.project-labels .project-tag {
+  margin-bottom: 0;
+}
+
+.project-tag--status {
+  color: var(--muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
+
+.meta-block {
+  margin-top: 1.1rem;
+}
+
+.meta-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.meta-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meta-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.meta-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.67em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+}
+
+.tech-tag {
+  padding: 3px 8px;
+  color: var(--muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.case-detail {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.case-detail summary {
+  position: relative;
+  padding-right: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  list-style-position: outside;
+}
+
+.case-detail summary:hover {
+  color: var(--accent);
+}
+
+.case-detail[open] summary {
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.case-detail-text {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.project-link {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.case-note {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+  background: var(--surface2);
+  border-left: 2px solid var(--accent);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.status-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.status-list li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.status-icon {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+/* Source 4 theme screenshots remain visible because the theme migration
+   details block is open by default in index.html. */
+.before-after-grid {
+  margin-top: 1rem;
+}
+
+.comparison-image-frame {
+  height: 340px;
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    padding: 1.15rem;
+  }
+
+  .comparison-image-frame {
+    height: 240px;
+  }
+}
